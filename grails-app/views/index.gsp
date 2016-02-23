@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
+		<title>Blog Zone Rarararar</title>
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
@@ -24,6 +25,7 @@
 			}
 
 			#status ul {
+				font-family: 'Josefin Sans', sans-serif;
 				font-size: 0.9em;
 				list-style-type: none;
 				margin-bottom: 0.6em;
@@ -35,12 +37,14 @@
 			}
 
 			#status h1 {
+				font-family: 'Josefin Sans', sans-serif;
 				text-transform: uppercase;
 				font-size: 1.1em;
 				margin: 0 0 0.3em;
 			}
 
 			#page-body {
+				font-family: 'Josefin Sans', sans-serif;
 				margin: 2em 1em 1.25em 18em;
 			}
 
