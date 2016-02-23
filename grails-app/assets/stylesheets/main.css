@@ -52,6 +52,7 @@ body {
 }
 
 #grailsLogo img{
+		padding-top: 2%;
 		max-width: 50%;
 		max-height: 50%
 	 	width: 50%;
@@ -73,7 +74,7 @@ body {
 }
 
 a:link, a:visited, a:hover {
-	color: #48802c;
+	color: #6495ED;
 }
 
 a:hover, a:active {
@@ -81,7 +82,7 @@ a:hover, a:active {
 }
 
 h1 {
-	color: #48802c;
+	color: #6495ED;
 	font-weight: normal;
 	font-size: 1.25em;
 	margin: 0.8em 0 0.3em 0;
