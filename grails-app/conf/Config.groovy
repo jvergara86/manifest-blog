@@ -59,6 +59,8 @@ grails {
     }
 }
 
+// configures the URL to hyphenated from camelCasing
+grails.web.url.converter = 'hyphenated'
 
 grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration
