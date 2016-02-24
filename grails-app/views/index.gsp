@@ -85,7 +85,7 @@
 			<g:link url="http://localhost:8080/blog/createNewBlogEntry/create"><h1>Create Blog</h1></g:link>
 			<h1>Earlier Blogs</h1>
 			<h1>Search: </h1>
-			<g:field name = "Search" size = "10px"></g:field>
+			<g:field type="text" name = "Search" size = "10px"></g:field>
 			<ul>
 			</ul>
 			<h1>Links</h1>
@@ -97,7 +97,7 @@
 			<p>Welcome to the mind of a maniac.</p>
 
 			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
+				<h2>Recent Post:</h2>
 				<ul>
 					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
