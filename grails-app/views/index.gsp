@@ -82,8 +82,10 @@
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
+			<g:link url="http://localhost:8080/blog/createNewBlogEntry/create"><h1>Create Blog</h1></g:link>
 			<h1>Earlier Blogs</h1>
-			<g:link controller="CreateNewBlogEntry"><h1>Create Blog</h1></g:link>
+			<li></li>
+			<ul></ul>
 			<h1>Search: </h1>
 			<g:field name = "Search" size = "10px"></g:field>
 			<ul>
