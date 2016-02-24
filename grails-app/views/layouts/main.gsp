@@ -17,7 +17,7 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><asset:image src="blog-zone-logo.png" alt="Blog Zone"/></div>
+		<div id="blogZoneLogo" role="banner"><asset:image src="blog-zone-logo.png" alt="Blog Zone"/></div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
