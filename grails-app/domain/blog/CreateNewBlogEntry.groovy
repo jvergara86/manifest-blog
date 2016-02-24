@@ -7,7 +7,5 @@ class CreateNewBlogEntry {
 	Date dateCreated
 	
     static constraints = {
-		blogTitle(blank:false)
-		blogEntry(maxSize:2000, blank:false)
     }
 }
