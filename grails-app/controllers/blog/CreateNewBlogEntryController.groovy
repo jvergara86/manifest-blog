@@ -39,7 +39,7 @@ class CreateNewBlogEntryController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'createNewBlogEntry.label', default: 'CreateNewBlogEntry'), createNewBlogEntryInstance.id])
+                flash.message = message(code: 'default.created.message', args: ['Blog Post:', createNewBlogEntryInstance.blogTitle])
                 redirect createNewBlogEntryInstance
             }
             '*' { respond createNewBlogEntryInstance, [status: CREATED] }
@@ -66,7 +66,7 @@ class CreateNewBlogEntryController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'CreateNewBlogEntry.label', default: 'CreateNewBlogEntry'), createNewBlogEntryInstance.id])
+                flash.message = message(code: 'default.updated.message', args: ['Blog Post:', createNewBlogEntryInstance.blogTitle])
                 redirect createNewBlogEntryInstance
             }
             '*'{ respond createNewBlogEntryInstance, [status: OK] }
@@ -85,7 +85,7 @@ class CreateNewBlogEntryController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'CreateNewBlogEntry.label', default: 'CreateNewBlogEntry'), createNewBlogEntryInstance.id])
+                flash.message = message(code: 'default.deleted.message', args: ['Blog Post:', createNewBlogEntryInstance.blogTitle])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
@@ -95,7 +95,7 @@ class CreateNewBlogEntryController {
     protected void notFound() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'createNewBlogEntry.label', default: 'CreateNewBlogEntry'), params.id])
+                flash.message = message(code: 'default.not.found.message', args: ['Blog Post:', createNewBlogEntryInstance.blogTitle])
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }
