@@ -8,4 +8,8 @@ class CreateNewBlogEntry {
 	
     static constraints = {
     }
+	
+	static mapping = {
+		sort dateCreated: "desc"
+	}
 }

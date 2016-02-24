@@ -11,8 +11,11 @@ class CreateNewBlogEntryControllerSpec extends Specification {
 
     def populateValidParams(params) {
         assert params != null
-        // TODO: Populate valid properties like...
-        //params["name"] = 'someValidName'
+        
+        params["blogTitle"] = 'someValidName'
+		params["blogEntry"] = 'someValidName'
+		params["dateCreated"] = new Date()
+		
     }
 
     void "Test the index action returns the correct model"() {
