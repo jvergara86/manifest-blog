@@ -84,6 +84,8 @@
 		<div id="status" role="complementary">
 			<h1>Earlier Blogs</h1>
 			<g:link controller="CreateNewBlogEntry"><h1>Create Blog</h1></g:link>
+			<h1>Search: </h1>
+			<g:field name = "Search" size = "10px"></g:field>
 			<ul>
 			</ul>
 			<h1>Links</h1>
@@ -91,11 +93,8 @@
 			</ul>
 		</div>
 		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
+			<h1>Welcome to Blog Zone</h1>
+			<p>Welcome to the mind of a maniac.</p>
 
 			<div id="controller-list" role="navigation">
 				<h2>Available Controllers:</h2>
