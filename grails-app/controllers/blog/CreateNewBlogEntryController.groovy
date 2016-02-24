@@ -39,7 +39,7 @@ class CreateNewBlogEntryController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: ['Blog Post:', createNewBlogEntryInstance.blogTitle])
+                flash.message = message(code: 'createEntry.created.message', args: ['Blog Post:', createNewBlogEntryInstance.blogTitle])
                 redirect createNewBlogEntryInstance
             }
             '*' { respond createNewBlogEntryInstance, [status: CREATED] }

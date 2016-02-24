@@ -11,7 +11,7 @@ When /^I publish a new blog post$/ do
 end
 
 Then /^I am notified that the blog post was successfully added$/ do
-  expect(@page.html).to include("The blog was successfully added")
+  expect(@page.html).to include("was successfully added")
 end
 
 And /^the newly added blog post is at the top of the recent posts list$/ do
