@@ -13,7 +13,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: createNewBlogEntryInstance, field: 'blogEntry', 'error')} required">
 	<label for="blogEntry">
-		<g:message code="createNewBlogEntry.blogEntry.label" default="Enter Blog Body Here:" />
+		<g:message code="createNewBlogEntry.blogEntry.label" default="Blog Body:" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textArea name="blogEntry" cols="40" rows="5" maxlength="7000" style="width:400px;" required="" value="${createNewBlogEntryInstance?.blogEntry}"/>
