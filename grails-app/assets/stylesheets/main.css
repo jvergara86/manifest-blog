@@ -11,9 +11,9 @@ h1, h2, h3, h4, h5, h6 {
 /* BASE LAYOUT */
 
 html {
-	background-color: #ddd;
+	background-color: #FFFFFF;
 	background-image: -moz-linear-gradient(center top, #aaa, #ddd);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #FFFFFF));
 	background-image: linear-gradient(top, #aaa, #ddd);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#aaaaaa', EndColorStr = '#dddddd');
 	background-repeat: no-repeat;
@@ -48,7 +48,7 @@ body {
 }
 
 #grailsLogo {
-	background-color: #b0e0e6;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #b1e0e6));
 }
 
 #grailsLogo img{
