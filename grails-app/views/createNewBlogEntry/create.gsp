@@ -9,7 +9,7 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}">Home</a></li>
-				<li><g:link class="list" action="index">Old Blog Posts</g:link></li>
+				<li><g:link class="list" action="index">Back to Blog Posts</g:link></li>
 			</ul>
 		</div>
 		<div id="create-createNewBlogEntry" class="content scaffold-create" role="main">

@@ -11,8 +11,8 @@
 		<a href="#show-createNewBlogEntry" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}">Back to Blog Zone's Home Page</a></li>
-				<li><g:link class="list" action="index">Back to My Blog Posts</g:link></li>
+				<li><a class="home" href="${createLink(uri: '/')}">Home</a></li>
+				<li><g:link class="list" action="index">Back to Blog Posts</g:link></li>
 				<li><g:link class="create" action="create">Create New Blog Post</g:link></li>
 			</ul>
 		</div>
