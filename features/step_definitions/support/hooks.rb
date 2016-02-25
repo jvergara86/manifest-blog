@@ -1,5 +1,5 @@
 Before do
-  @browser = Watir::Browser.new
+  @browser = Watir::Browser.new 'firefox'
 end
 
 After do

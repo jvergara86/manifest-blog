@@ -1,19 +1,24 @@
+require 'watir-webdriver'
 #Scenario: New Blog Post
 
+After do
+  delete_test_post
+end
+
 Given /^I am logged in as a blogger$/ do
-  @page = CreateNewBlogEntryPage.new @browser
-  @page.goto
+  goto_create_blog_entry
 end
 
 When /^I publish a new blog post$/ do
-  @page.create_new_blog_entry
-  sleep 1
+  fill_in_blog
 end
 
 Then /^I am notified that the blog post was successfully added$/ do
-  expect(@page.html).to include("was successfully added")
+  response = read_blog_submission_response
+  expect(response).to include 'was successfully added'
 end
 
-#And /^the newly added blog post is at the top of the recent posts list$/ do
-  
-#end
+And /^the newly added blog post is at the top of the recent posts list$/ do
+	goto_created_blog_entries
+	expect(read_first_title).to include 'My Test Blog Title'
+end 

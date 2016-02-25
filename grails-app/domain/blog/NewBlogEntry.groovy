@@ -1,6 +1,6 @@
 package blog
 
-class CreateNewBlogEntry {
+class NewBlogEntry {
 
 	String blogTitle
 	String blogEntry
