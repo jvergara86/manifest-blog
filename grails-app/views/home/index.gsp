@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<script src="js/bootstrap.min.js"></script>
 <html>
 	<head>
 		<meta name="layout" content="main"/>
 		<title>Blog Zone Rarararar</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		<style type="text/css" media="screen">
 			#status {
