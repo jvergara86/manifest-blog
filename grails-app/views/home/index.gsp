@@ -51,8 +51,9 @@
 			</ul>
 		</div>
 		<div id="page-body" role="main">
-			<h1>Jeff Goldblum's Blog</h1>
-
+			<div class="blog-header">
+				<h1>Jeff Goldblum's Blog</h1>
+			</div>
 			<div id="controller-list" role="navigation">
 				<hr>
 					<g:each in="${blogEntries}" var="blogInstance" status="i">

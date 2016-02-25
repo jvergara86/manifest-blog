@@ -50,12 +50,25 @@
 			</ul>
 		</div>
 		<div id="page-body" role="main">
-			<h1>Jeff Goldblum's Blog Posts</h1>
-			<hr>
+			
+			<div class="blog-header">
+				<h1>Jeff Goldblum's Blog Posts</h1>
+				<hr>
+			</div>
 			<div class="container">
-				<g:each in="${blogEntries}" var="blogInstance">
- 					<h2  id="${blogInstance.id}">${blogInstance.blogTitle}</h2>
- 					${blogInstance.blogEntry}
+				<g:each in="${blogEntries}" var="blogInstance" status="i">
+				
+					<div class="row blog-title" data-toggle="collapse" data-target="#${i}">
+						<div id="${blogInstance.id}" class="col-sm-12">
+	 						<h2>${blogInstance.blogTitle}</h2>
+						</div>	
+					</div>
+					<div id="${i}" class="collapse" class="row blog-post">
+						<div class="col-sm-6">
+	 						${blogInstance.blogEntry}
+	 					</div>
+					</div>
+					
 				</g:each>
 			</div>
 		</div>
