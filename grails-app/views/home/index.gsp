@@ -86,8 +86,8 @@
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
-			<g:link url="http://localhost:8080/blog/newBlogEntry/create"><h1>Create Blog</h1></g:link>
-			<g:link url="http://localhost:8080/blog/blogEntries"><h1>Earlier Blogs</h1></g:link>
+			<g:link url="../blog/newBlogEntry/create"><h1>Create Blog</h1></g:link>
+			<g:link url="../blog/blogEntries"><h1>View All Blogs</h1></g:link>
 			<h1>Search: </h1>
 			<g:field type="text" name = "Search" size = "10px"></g:field>
 			<ul>
@@ -104,7 +104,7 @@
 				<h1>Recent Posts:</h1><hr>
 					<g:each in="${blogEntries}" var="blogInstance" status="i">
 					<g:if test="${i < 10}">
- 						<ul><h2>${blogInstance.blogTitle}</h2></ul>
+ 						<ul><h2><a href="blogEntries#${blogInstance.id}">${blogInstance.blogTitle}</a></h2></ul>
  						<ul><p>${blogInstance.blogEntry}</p></ul>
 					</g:if>
 					</g:each>

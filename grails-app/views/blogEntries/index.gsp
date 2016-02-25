@@ -54,7 +54,11 @@
 	</head>
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		
+		<div class="navigation-bar">
+		<g:link url="../blog"><h2>Home Page</h2>
+		<h2>Search:</h2>
+		<g:field type="text" name = "Search" size = "10px"></g:field>
+		</g:link></div>
 		<div id="page-body" role="main">
 			<h1>Jeff Goldblum's Blog Posts</h1>
 			<p>insert line here</p>
