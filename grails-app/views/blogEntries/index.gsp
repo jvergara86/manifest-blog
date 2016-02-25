@@ -18,6 +18,10 @@
 				font-size: 1em;
 			}
 
+			ul {
+				list-style-type: none;
+			}
+
 			p {
 				line-height: 1.5;
 				margin: 0.25em 0;
@@ -54,19 +58,12 @@
 		<div id="page-body" role="main">
 			<h1>Jeff Goldblum's Blog Posts</h1>
 			<p>insert line here</p>
-			<g:each in="${blogEntries}" var="blogInstance">
- 			<li>${blogInstance.blogTitle}</li>
- 			<li>${blogInstance.blogEntry}</li>
-			</g:each>
-
-			<div id="controller-list" role="navigation">
-				<h2>Recent Post:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
-			</div>
+			<ul>
+				<g:each in="${blogEntries}" var="blogInstance">
+ 					<li><h2>${blogInstance.blogTitle}</h2></li>
+ 					<li>${blogInstance.blogEntry}</li>
+				</g:each>
+			</ul>
 		</div>
 	</body>
 </html>

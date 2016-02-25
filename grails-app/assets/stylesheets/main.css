@@ -81,7 +81,7 @@ a:hover, a:active {
 	outline: none; /* prevents outline in webkit on active links but retains it for tab focus */
 }
 
-h1 {
+h1,h2 {
 	color: #6495ED;
 	font-weight: normal;
 	font-size: 1.25em;

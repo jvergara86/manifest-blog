@@ -98,12 +98,10 @@
 
 			<div id="controller-list" role="navigation">
 				<h2>Recent Posts:</h2>
-				<ul>
 					<g:each in="${blogEntries}" var="blogInstance">
- 						<ul><h1>${blogInstance.blogTitle}</h1></ul>
+ 						<ul><h2>${blogInstance.blogTitle}</h2></ul>
  						<ul><p>${blogInstance.blogEntry}</p></ul>
 					</g:each>
-				</ul>
 			</div>
 		</div>
 	</body>
