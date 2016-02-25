@@ -99,6 +99,10 @@
 			<div id="controller-list" role="navigation">
 				<h2>Recent Post:</h2>
 				<ul>
+					<g:each in="${blogEntries}" var="blogInstance">
+ 						<li>${blogInstance.blogTitle}</li>
+ 						<li>${blogInstance.blogEntry}</li>
+					</g:each>
 					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
 					</g:each>

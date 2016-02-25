@@ -2,5 +2,8 @@ package blog
 
 class HomeController {
 
-    def index() { }
+    def index() { 
+		List<NewBlogEntry> allBlogEntries = NewBlogEntry.findAll()
+		[blogEntries:allBlogEntries]
+	}
 }
