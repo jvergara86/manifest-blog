@@ -12,7 +12,7 @@ class NewBlogEntryController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-    	respond NewBlogEntry.list(params), model:[createNewBlogEntryInstanceCount: NewBlogEntry.count()]
+    	respond NewBlogEntry.list(params), model:[newBlogEntryInstanceCount: NewBlogEntry.count()]
 	}
 
     def show(NewBlogEntry createNewBlogEntryInstance) {
