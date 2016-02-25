@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <html>
 	<head>
 		<meta name="layout" content="main"/>
@@ -105,7 +106,6 @@
 					<g:if test="${i < 10}">
  						<ul><h2>${blogInstance.blogTitle}</h2></ul>
  						<ul><p>${blogInstance.blogEntry}</p></ul>
-						<g:link>View/Edit Comments</g:link>
 					</g:if>
 					</g:each>
 			</div>
