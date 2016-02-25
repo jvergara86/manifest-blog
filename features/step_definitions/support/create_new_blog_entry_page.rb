@@ -3,7 +3,7 @@ require 'page-object'
 class CreateNewBlogEntryPage
 	include PageObject
 	
-	page_url "http://localhost:8080/blog/create-new-blog-entry/create"
+	page_url "http://localhost:8080/blog/new-blog-entry/create"
 	
 	text_field(:title, :id => "blogTitle")
 	text_area(:content, :id => "blogEntry")

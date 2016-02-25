@@ -19,13 +19,13 @@ def read_blog_submission_response
   on_page(ShowEntryPage).response
 end
 
-def read_created_blog_entries_response
+def read_first_title
   on_page(CreatedBlogEntriesPage).first_title
 end
 
 def delete_test_post
   @browser.back
-  @browser.button(:text => 'Delete Post').click
+  @browser.button(:class => 'delete').click
   sleep 1
   @browser.alert.ok
 end

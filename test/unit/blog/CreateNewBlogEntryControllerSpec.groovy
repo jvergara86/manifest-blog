@@ -5,8 +5,8 @@ package blog
 import grails.test.mixin.*
 import spock.lang.*
 
-@TestFor(CreateNewBlogEntryController)
-@Mock(CreateNewBlogEntry)
+@TestFor(NewBlogEntryController)
+@Mock(NewBlogEntry)
 class CreateNewBlogEntryControllerSpec extends Specification {
 
     def populateValidParams(params) {
@@ -41,7 +41,7 @@ class CreateNewBlogEntryControllerSpec extends Specification {
         when:"The save action is executed with an invalid instance"
             request.contentType = FORM_CONTENT_TYPE
             request.method = 'POST'
-            def createNewBlogEntry = new CreateNewBlogEntry()
+            def createNewBlogEntry = new NewBlogEntry()
             createNewBlogEntry.validate()
             controller.save(createNewBlogEntry)
 
@@ -52,14 +52,14 @@ class CreateNewBlogEntryControllerSpec extends Specification {
         when:"The save action is executed with a valid instance"
             response.reset()
             populateValidParams(params)
-            createNewBlogEntry = new CreateNewBlogEntry(params)
+            createNewBlogEntry = new NewBlogEntry(params)
 
             controller.save(createNewBlogEntry)
 
         then:"A redirect is issued to the show action"
             response.redirectedUrl == '/createNewBlogEntry/show/1'
             controller.flash.message != null
-            CreateNewBlogEntry.count() == 1
+            NewBlogEntry.count() == 1
     }
 
     void "Test that the show action returns the correct model"() {
@@ -71,7 +71,7 @@ class CreateNewBlogEntryControllerSpec extends Specification {
 
         when:"A domain instance is passed to the show action"
             populateValidParams(params)
-            def createNewBlogEntry = new CreateNewBlogEntry(params)
+            def createNewBlogEntry = new NewBlogEntry(params)
             controller.show(createNewBlogEntry)
 
         then:"A model is populated containing the domain instance"
@@ -87,7 +87,7 @@ class CreateNewBlogEntryControllerSpec extends Specification {
 
         when:"A domain instance is passed to the edit action"
             populateValidParams(params)
-            def createNewBlogEntry = new CreateNewBlogEntry(params)
+            def createNewBlogEntry = new NewBlogEntry(params)
             controller.edit(createNewBlogEntry)
 
         then:"A model is populated containing the domain instance"
@@ -107,7 +107,7 @@ class CreateNewBlogEntryControllerSpec extends Specification {
 
         when:"An invalid domain instance is passed to the update action"
             response.reset()
-            def createNewBlogEntry = new CreateNewBlogEntry()
+            def createNewBlogEntry = new NewBlogEntry()
             createNewBlogEntry.validate()
             controller.update(createNewBlogEntry)
 
@@ -118,7 +118,7 @@ class CreateNewBlogEntryControllerSpec extends Specification {
         when:"A valid domain instance is passed to the update action"
             response.reset()
             populateValidParams(params)
-            createNewBlogEntry = new CreateNewBlogEntry(params).save(flush: true)
+            createNewBlogEntry = new NewBlogEntry(params).save(flush: true)
             controller.update(createNewBlogEntry)
 
         then:"A redirect is issues to the show action"
@@ -139,16 +139,16 @@ class CreateNewBlogEntryControllerSpec extends Specification {
         when:"A domain instance is created"
             response.reset()
             populateValidParams(params)
-            def createNewBlogEntry = new CreateNewBlogEntry(params).save(flush: true)
+            def createNewBlogEntry = new NewBlogEntry(params).save(flush: true)
 
         then:"It exists"
-            CreateNewBlogEntry.count() == 1
+            NewBlogEntry.count() == 1
 
         when:"The domain instance is passed to the delete action"
             controller.delete(createNewBlogEntry)
 
         then:"The instance is deleted"
-            CreateNewBlogEntry.count() == 0
+            NewBlogEntry.count() == 0
             response.redirectedUrl == '/createNewBlogEntry/index'
             flash.message != null
     }

@@ -2,10 +2,7 @@ require 'watir-webdriver'
 #Scenario: New Blog Post
 
 After do
-  @browser.back
-  @browser.button(:text => 'Delete Post').click
-  sleep 1
-  @browser.alert.ok
+  delete_test_post
 end
 
 Given /^I am logged in as a blogger$/ do
@@ -23,6 +20,5 @@ end
 
 And /^the newly added blog post is at the top of the recent posts list$/ do
 	goto_created_blog_entries
-	first_title = read_created_blog_entries_response
-	expect(first_title).to include 'My Test Blog Title'
+	expect(read_first_title).to include 'My Test Blog Title'
 end 
