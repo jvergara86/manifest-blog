@@ -97,11 +97,10 @@
 			</ul>
 		</div>
 		<div id="page-body" role="main">
-			<h1>Welcome to Blog Zone</h1>
-			<p>Welcome to the mind of a maniac.</p>
+			<h1>Jeff Goldblum's Blog</h1>
 
 			<div id="controller-list" role="navigation">
-				<h1>Recent Posts:</h1><hr>
+				<hr>
 					<g:each in="${blogEntries}" var="blogInstance" status="i">
 					<g:if test="${i < 10}">
  						<ul><h2><a href="blogEntries#${blogInstance.id}">${blogInstance.blogTitle}</a></h2></ul>
