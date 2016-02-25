@@ -98,10 +98,11 @@
 			<p>Welcome to the mind of a maniac.</p>
 
 			<div id="controller-list" role="navigation">
-				<h2>Recent Posts:</h2>
+				<h1>Recent Posts:</h1><hr>
 					<g:each in="${blogEntries}" var="blogInstance">
  						<ul><h2>${blogInstance.blogTitle}</h2></ul>
  						<ul><p>${blogInstance.blogEntry}</p></ul>
+						<g:link>View/Edit Comments</g:link>
 					</g:each>
 			</div>
 		</div>
