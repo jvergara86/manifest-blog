@@ -62,6 +62,7 @@
 				<g:each in="${blogEntries}" var="blogInstance">
  					<li><h2>${blogInstance.blogTitle}</h2></li>
  					<li>${blogInstance.blogEntry}</li>
+					<g:link>View/Edit Comments</g:link>
 				</g:each>
 			</ul>
 		</div>
