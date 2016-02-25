@@ -7,16 +7,18 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class NewBlogEntryController {
-
+	
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
     	respond NewBlogEntry.list(params), model:[newBlogEntryInstanceCount: NewBlogEntry.count()]
+	
+	
 	}
 
-    def show(NewBlogEntry createNewBlogEntryInstance) {
-        respond createNewBlogEntryInstance
+    def show(NewBlogEntry newBlogEntryInstance) {
+        respond newBlogEntryInstance
     }
 
     def create() {
@@ -24,68 +26,68 @@ class NewBlogEntryController {
     }
 
     @Transactional
-    def save(NewBlogEntry createNewBlogEntryInstance) {
-        if (createNewBlogEntryInstance == null) {
+    def save(NewBlogEntry newBlogEntryInstance) {
+        if (newBlogEntryInstance == null) {
             notFound()
             return
         }
 
-        if (createNewBlogEntryInstance.hasErrors()) {
-            respond createNewBlogEntryInstance.errors, view:'create'
+        if (newBlogEntryInstance.hasErrors()) {
+            respond newBlogEntryInstance.errors, view:'create'
             return
         }
 
-        createNewBlogEntryInstance.save flush:true
+        newBlogEntryInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'createEntry.created.message', args: ['Blog Post:', createNewBlogEntryInstance.blogTitle])
-                redirect createNewBlogEntryInstance
+                flash.message = message(code: 'createEntry.created.message', args: ['Blog Post:', newBlogEntryInstance.blogTitle])
+                redirect newBlogEntryInstance
             }
-            '*' { respond createNewBlogEntryInstance, [status: CREATED] }
+            '*' { respond newBlogEntryInstance, [status: CREATED] }
         }
     }
 
-    def edit(NewBlogEntry createNewBlogEntryInstance) {
-        respond createNewBlogEntryInstance
+    def edit(NewBlogEntry newBlogEntryInstance) {
+        respond newBlogEntryInstance
     }
 
     @Transactional
-    def update(NewBlogEntry createNewBlogEntryInstance) {
-        if (createNewBlogEntryInstance == null) {
+    def update(NewBlogEntry newBlogEntryInstance) {
+        if (newBlogEntryInstance == null) {
             notFound()
             return
         }
 
-        if (createNewBlogEntryInstance.hasErrors()) {
-            respond createNewBlogEntryInstance.errors, view:'edit'
+        if (newBlogEntryInstance.hasErrors()) {
+            respond newBlogEntryInstance.errors, view:'edit'
             return
         }
 
-        createNewBlogEntryInstance.save flush:true
+        newBlogEntryInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: ['Blog Post:', createNewBlogEntryInstance.blogTitle])
-                redirect createNewBlogEntryInstance
+                flash.message = message(code: 'default.updated.message', args: ['Blog Post:', newBlogEntryInstance.blogTitle])
+                redirect newBlogEntryInstance
             }
-            '*'{ respond createNewBlogEntryInstance, [status: OK] }
+            '*'{ respond newBlogEntryInstance, [status: OK] }
         }
     }
 
     @Transactional
-    def delete(NewBlogEntry createNewBlogEntryInstance) {
+    def delete(NewBlogEntry newBlogEntryInstance) {
 
-        if (createNewBlogEntryInstance == null) {
+        if (newBlogEntryInstance == null) {
             notFound()
             return
         }
 
-        createNewBlogEntryInstance.delete flush:true
+        newBlogEntryInstance.delete flush:true
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: ['Blog Post:', createNewBlogEntryInstance.blogTitle])
+                flash.message = message(code: 'default.deleted.message', args: ['Blog Post:', newBlogEntryInstance.blogTitle])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
@@ -95,7 +97,7 @@ class NewBlogEntryController {
     protected void notFound() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: ['Blog Post:', createNewBlogEntryInstance.blogTitle])
+                flash.message = message(code: 'default.not.found.message', args: ['Blog Post:', newBlogEntryInstance.blogTitle])
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }
