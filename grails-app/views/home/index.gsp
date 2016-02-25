@@ -84,6 +84,9 @@
 		<div id="status" role="complementary">
 			<g:link url="http://localhost:8080/blog/createNewBlogEntry/create"><h1>Create Blog</h1></g:link>
 			<h1>Earlier Blogs</h1>
+			<g:each in="${params}" var = "blog" status = "i">
+				<h1>${blog.dateCreated}</h1>
+			</g:each>
 			<h1>Search: </h1>
 			<g:field type="text" name = "Search" size = "10px"></g:field>
 			<ul>
