@@ -7,11 +7,6 @@
 		<style type="text/css" media="screen">
 		
 
-			#page-body {
-				font-family: 'Josefin Sans', sans-serif;
-				margin: 2em 1em 1.25em 2em;
-			}
-
 			h2 {
 				margin-top: 1em;
 				margin-bottom: 0.3em;
@@ -24,16 +19,6 @@
 
 			p {
 				line-height: 1.5;
-				margin: 0.25em 0;
-			}
-
-			#controller-list ul {
-				list-style-position: inside;
-			}
-
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
 				margin: 0.25em 0;
 			}
 
@@ -54,20 +39,25 @@
 	</head>
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="navigation-bar">
-		<g:link url="../blog"><h2>Home Page</h2>
-		<h2>Search:</h2>
-		<g:field type="text" name = "Search" size = "10px"></g:field>
-		</g:link></div>
+		<div id="status" role="complementary">
+			<g:link url="../blog"><h1>Home</h1></g:link>
+			<h1>Search: </h1>
+			<g:field type="text" name = "Search" size = "10px"></g:field>
+			<ul>
+			</ul>
+			<h1>Links</h1>
+			<ul>
+			</ul>
+		</div>
 		<div id="page-body" role="main">
 			<h1>Jeff Goldblum's Blog Posts</h1>
-			<p>insert line here</p>
-			<ul>
+			<hr>
+			<div class="container">
 				<g:each in="${blogEntries}" var="blogInstance">
- 					<li><h2  id="${blogInstance.id}">${blogInstance.blogTitle}</h2></li>
- 					<li>${blogInstance.blogEntry}</li>
+ 					<h2  id="${blogInstance.id}">${blogInstance.blogTitle}</h2>
+ 					${blogInstance.blogEntry}
 				</g:each>
-			</ul>
+			</div>
 		</div>
 	</body>
 </html>

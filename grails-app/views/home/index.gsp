@@ -8,44 +8,7 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		<style type="text/css" media="screen">
-			#status {
-				background-color: #F0F8FF;
-				border: .2em solid #F0F8FF;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				position: fixed;
-				float: left;
-				border-radius: 0.6em;
-			}
 
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
-
-			#status ul {
-				font-family: 'Josefin Sans', sans-serif;
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
-
-			#status li {
-				line-height: 1.3;
-			}
-
-			#status h1 {
-				font-family: 'Josefin Sans', sans-serif;
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
-
-			#page-body {
-				font-family: 'Josefin Sans', sans-serif;
-				margin: 2em 1em 1.25em 18em;
-			}
 
 			h2 {
 				margin-top: 1em;
@@ -58,15 +21,6 @@
 				margin: 0.25em 0;
 			}
 
-			#controller-list ul {
-				list-style-position: inside;
-			}
-
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
 
 			@media screen and (max-width: 480px) {
 				#status {
