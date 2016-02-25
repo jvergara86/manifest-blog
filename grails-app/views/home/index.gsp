@@ -11,6 +11,7 @@
 				margin: 2em 2em 1em;
 				padding: 1em;
 				width: 12em;
+				position: fixed;
 				float: left;
 				border-radius: 0.6em;
 			}

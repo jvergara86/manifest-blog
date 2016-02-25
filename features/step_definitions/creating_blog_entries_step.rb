@@ -1,7 +1,7 @@
 require 'watir-webdriver'
 #Scenario: New Blog Post
 
-After do
+After('@creating_blog_entries_step') do
   delete_test_post
 end
 
