@@ -60,7 +60,7 @@
 			<p>insert line here</p>
 			<ul>
 				<g:each in="${blogEntries}" var="blogInstance">
- 					<li><h2>${blogInstance.blogTitle}</h2></li>
+ 					<li><h2  id="${blogInstance.id}">${blogInstance.blogTitle}</h2></li>
  					<li>${blogInstance.blogEntry}</li>
 				</g:each>
 			</ul>
