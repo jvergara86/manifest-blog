@@ -83,10 +83,7 @@
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
 			<g:link url="http://localhost:8080/blog/newBlogEntry/create"><h1>Create Blog</h1></g:link>
-			<h1>Earlier Blogs</h1>
-			<g:each in="${params}" var = "blog" status = "i">
-				<h1>${blog.dateCreated}</h1>
-			</g:each>
+			<g:link url="http://localhost:8080/blog/blogEntries"><h1>Earlier Blogs</h1></g:link>
 			<h1>Search: </h1>
 			<g:field type="text" name = "Search" size = "10px"></g:field>
 			<ul>
@@ -100,14 +97,11 @@
 			<p>Welcome to the mind of a maniac.</p>
 
 			<div id="controller-list" role="navigation">
-				<h2>Recent Post:</h2>
+				<h2>Recent Posts:</h2>
 				<ul>
 					<g:each in="${blogEntries}" var="blogInstance">
- 						<li>${blogInstance.blogTitle}</li>
- 						<li>${blogInstance.blogEntry}</li>
-					</g:each>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+ 						<ul><h1>${blogInstance.blogTitle}</h1></ul>
+ 						<ul><p>${blogInstance.blogEntry}</p></ul>
 					</g:each>
 				</ul>
 			</div>

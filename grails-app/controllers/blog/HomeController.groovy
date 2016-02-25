@@ -4,6 +4,8 @@ class HomeController {
 
     def index() { 
 		List<NewBlogEntry> allBlogEntries = NewBlogEntry.findAll()
-		[blogEntries:allBlogEntries]
+
+
+        [blogEntries:allBlogEntries]
 	}
 }
