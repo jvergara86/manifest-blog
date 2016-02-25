@@ -60,16 +60,11 @@
 			<p>insert line here</p>
 			<ul>
 				<g:each in="${blogEntries}" var="blogInstance">
- 					<li><h2>${blogInstance.blogTitle}</h2></li>
+ 					<li><h2  id="${blogInstance.id}">${blogInstance.blogTitle}</h2></li>
  					<li>${blogInstance.blogEntry}</li>
 					<button data-toogle="collapse" data-target="#Comments">View/Edit Comments</button>
 				</g:each>
 			</ul>
-				<div id= "Comments" class = "collapse">
-					<g:each in="${blogEntries.Commments}" var=""blogInstance">
-						<li>${blogInstance}</li>
-					</g:each>
-				</div>
 		</div>
 	</body>
 </html>
