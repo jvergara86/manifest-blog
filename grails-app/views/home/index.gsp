@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Blog Zone Rarararar</title>
+		<title>Jeff Goldblums Blog</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		<style type="text/css" media="screen">
 
@@ -19,7 +21,6 @@
 				margin: 0.25em 0;
 			}
 
-		
 
 			@media screen and (max-width: 480px) {
 				#status {
@@ -39,13 +40,15 @@
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
+			<g:link url="../blog"></g:link>
 			<g:link url="../blog/newBlogEntry/create"><h1>Create Blog</h1></g:link>
 			<g:link url="../blog/blogEntries"><h1>View All Blogs</h1></g:link>
-			<h1>Search: </h1>
-			<g:field type="text" name = "Search" size = "10px"></g:field>
-			
+			<g:link url="../blog/search"><h1>Search Blog</h1></g:link>
+			<ul>
+			</ul>
 			<h1>Links</h1>
-			
+			<ul>
+			</ul>
 		</div>
 		<div id="page-body" role="main">
 			<div class="blog-header">
@@ -55,34 +58,11 @@
 				<hr>
 					<g:each in="${blogEntries}" var="blogInstance" status="i">
 					<g:if test="${i < 10}">
- 						<div class="container">
- 							<div class="col-sm-12">
- 								<h2><a class="blog-link" id="${blogInstance.id}" href="blogEntries#${blogInstance.id}">${blogInstance.blogTitle}</a></h2>
- 							</div>
- 							
- 							<div class="col-sm-5 blog-entry">
- 							${blogInstance.blogEntry}
- 							</div>
- 							<div class="col-sm-2">
-	 						${blogInstance.dateCreated}
-	 						
-	 						</div>
- 						</div>
+ 						<ul><h2><a href="blogEntries#${blogInstance.id}">${blogInstance.blogTitle}</a></h2></ul>
+ 						<ul><p>${blogInstance.blogEntry}</p></ul>
 					</g:if>
 					</g:each>
 			</div>
 		</div>
-		
-	<script>
-	$(document).ready(function(){
-		$('.blog-link').click(function(){
-			var clickedID = $(this).attr('id');
-			localStorage.setItem('blog-link', clickedID);
-		});
-	});
-	</script>
-​
 	</body>
 </html>
-
-

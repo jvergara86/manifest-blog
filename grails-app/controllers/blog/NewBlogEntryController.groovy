@@ -13,9 +13,13 @@ class NewBlogEntryController {
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
     	respond NewBlogEntry.list(params), model:[newBlogEntryInstanceCount: NewBlogEntry.count()]
-	
-	
+
 	}
+
+    def search() {
+        def blogs = NewBlogEntry.findAllByNameLike("${params.value}%")
+        render (template:'results', model: [value: params.value, blogs: blogs])
+    }
 
     def show(NewBlogEntry newBlogEntryInstance) {
         respond newBlogEntryInstance
