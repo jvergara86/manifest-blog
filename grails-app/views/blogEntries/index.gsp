@@ -52,7 +52,6 @@
 			</div>
 			<div class="container">
 				<g:each in="${blogEntries}" var="blogInstance" status="i">
-				
 					<div class="row blog-title" data-toggle="collapse" data-target="#${i}">
 						<div id="${blogInstance.id}" class="col-sm-12">
 	 						<h2>${blogInstance.blogTitle}</h2>
