@@ -4,9 +4,10 @@ Feature: View Blog Entries
   I want to be able to view blog posts of my favorite blogger
 
   Scenario: View Recent Blog Posts
-    Given my favorite blogger has been very active
+    """Given my favorite blogger has been very active
     When I visit the blog for my favorite blogger
-    Then then I should see a summary of my favorite blogger's 10 most recent posts in reverse order
+    Then I should see a summary of the 10 most recent posts, of my favorite blogger, in reverse order
+
 
   Scenario: View a Blog Post
     Given I visit the blog for my favorite blogger

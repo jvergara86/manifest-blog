@@ -65,14 +65,13 @@
 						</div>	
 					</div>
 					<div id="${i}" class="collapse" class="row blog-post">
-						<div class="col-sm-5">
+						<div class="col-sm-5 blog-entry">
 	 						${blogInstance.blogEntry}
 	 					</div>
 	 					<div class="col-sm-2">
 	 						${blogInstance.dateCreated}
 	 					</div>
 					</div>
-					
 				</g:each>
 			</div>
 		</div>

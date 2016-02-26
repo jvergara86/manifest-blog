@@ -60,7 +60,7 @@
  								<h2><a class="blog-link" id="${blogInstance.id}" href="blogEntries#${blogInstance.id}">${blogInstance.blogTitle}</a></h2>
  							</div>
  							
- 							<div class="col-sm-5">
+ 							<div class="col-sm-5 blog-entry">
  							${blogInstance.blogEntry}
  							</div>
  							<div class="col-sm-2">
