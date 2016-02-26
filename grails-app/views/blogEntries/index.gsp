@@ -53,6 +53,7 @@
 			
 			<div class="blog-header">
 				<h1>Jeff Goldblum's Blog Posts</h1>
+				<h5>(Click title to expand)</h5>
 				<hr>
 			</div>
 			<div class="container">
@@ -64,13 +65,24 @@
 						</div>	
 					</div>
 					<div id="${i}" class="collapse" class="row blog-post">
-						<div class="col-sm-6">
+						<div class="col-sm-5">
 	 						${blogInstance.blogEntry}
+	 					</div>
+	 					<div class="col-sm-2">
+	 						${blogInstance.dateCreated}
 	 					</div>
 					</div>
 					
 				</g:each>
 			</div>
 		</div>
+	<script>
+	$(document).ready(function(){
+		if(localStorage.getItem('blog-link') != 'N/A'){
+			$("#" + localStorage.getItem('blog-link')).trigger('click');
+			localStorage.setItem('blog-link', 'N/A');
+		}
+	});
+	</script>
 	</body>
 </html>
