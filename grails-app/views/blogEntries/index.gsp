@@ -42,12 +42,6 @@
 		<div id="status" role="complementary">
 			<g:link url="../blog"><h1>Home</h1></g:link>
 			<h1><a href="../blog/blogEntries/search">Search</a></h1>
-			<g:field type="text" name = "Search" size = "10px"></g:field>
-			<ul>
-			</ul>
-			<h1>Links</h1>
-			<ul>
-			</ul>
 		</div>
 		<div id="page-body" role="main">
 			
