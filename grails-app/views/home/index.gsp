@@ -41,14 +41,10 @@
 		<div id="status" role="complementary">
 			<g:link url="../blog/newBlogEntry/create"><h1>Create Blog</h1></g:link>
 			<g:link url="../blog/blogEntries"><h1>View All Blogs</h1></g:link>
-			<h1>Search: </h1>
-			<g:field type="text" name = "Search" size = "10px"></g:field>
-			
-			<h1>Links</h1>
-			
+			<g:link url="../blog/blogEntries/search"><h1>Search: </h1></g:link>
 		</div>
 		<div id="page-body" role="main">
-			<div class="blog-header">
+			<div class="blog-header" >
 				<h1>Jeff Goldblum's Blog</h1>
 			</div>
 			<div id="controller-list" role="navigation">

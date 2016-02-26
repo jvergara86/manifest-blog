@@ -42,12 +42,6 @@
 		<div id="status" role="complementary">
 			<g:link url="../blog"><h1>Home</h1></g:link>
 			<h1><a href="../blog/blogEntries/search">Search</a></h1>
-			<g:field type="text" name = "Search" size = "10px"></g:field>
-			<ul>
-			</ul>
-			<h1>Links</h1>
-			<ul>
-			</ul>
 		</div>
 		<div id="page-body" role="main">
 			
@@ -58,7 +52,6 @@
 			</div>
 			<div class="container">
 				<g:each in="${blogEntries}" var="blogInstance" status="i">
-				
 					<div class="row blog-title" data-toggle="collapse" data-target="#${i}">
 						<div id="${blogInstance.id}" class="col-sm-12">
 	 						<h2>${blogInstance.blogTitle}</h2>
