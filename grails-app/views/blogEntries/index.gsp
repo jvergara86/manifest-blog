@@ -66,7 +66,9 @@
 					</div>
 					<div id="${i}" class="collapse" class="row blog-post">
 						<div class="col-sm-5 blog-entry">
-	 						${blogInstance.blogEntry}
+	 						<a href="${createLink(mapping: "blog", controller:'blogEntries', action: 'show', params: [id: blogInstance.id,year: blogInstance.dateCreated.format("yyy"),month: blogInstance.dateCreated.format("MM"),day: blogInstance.dateCreated.format("dd"),title: blogInstance.blogTitle.replaceAll("\\s","-")])}">
+	 							${blogInstance.blogEntry}
+ 							</a>
 	 					</div>
 	 					<div class="col-sm-2">
 	 						${blogInstance.dateCreated}

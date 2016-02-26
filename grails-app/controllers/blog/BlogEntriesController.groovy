@@ -8,5 +8,9 @@ class BlogEntriesController {
 	   [blogEntries:allBlogEntries]
 
    }
+   
+   def show(NewBlogEntry newBlogEntryInstance) {
+	   respond newBlogEntryInstance
+   }
 }
 
