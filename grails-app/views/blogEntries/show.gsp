@@ -13,6 +13,7 @@
 			<ul>
 				<li><g:link class="home" url="${createLink(uri: '/')}">Home</g:link></li>
 				<li><g:link url="/./blog/blogEntries"><span class="glyphicon glyphicon-step-backward"></span>View All Blogs</g:link></li>
+				<li><g:link url="/./blog/blogEntries/search"><span class="glyphicon glyphicon-search"></span> Search Blogs</g:link></li>
 			</ul>
 		</div>
 		<div id="show-newBlogEntry" class="content scaffold-show" role="main">
