@@ -36,9 +36,10 @@ def delete_test_post
 end
 
 def get_blog_entry_count
-  @counter = 0
+  counter = 0
   @browser.divs(:class => 'col-sm-5 blog-entry').each do |div|
-    @counter = @counter + 1
+    counter = counter + 1
   end
-  return @counter
+  return counter
 end
+
