@@ -56,16 +56,19 @@
 					<g:each in="${blogEntries}" var="blogInstance" status="i">
 					<g:if test="${i < 10}">
  						<div class="container">
- 							<div class="col-sm-12">
- 								<h2><a class="blog-link" id="${blogInstance.id}" href="blogEntries#${blogInstance.id}">${blogInstance.blogTitle}</a></h2>
- 							</div>
- 							
- 							<div class="col-sm-5 blog-entry">
- 							${blogInstance.blogEntry}
- 							</div>
- 							<div class="col-sm-2">
-	 						${blogInstance.dateCreated}
-	 						
+	 						<div class="row">
+	 							<div class="col-sm-5">
+	 								<a class="blog-link" id="${blogInstance.id}" href="blogEntries#${blogInstance.id}"><h2 id="blog-link${i}">${blogInstance.blogTitle}</h2></a>
+	 							</div>
+	 							<div class="col-sm-7"></div>
+							</div>
+							<div class="row">
+	 							<div class="col-sm-5 blog-entry">
+	 								${blogInstance.blogEntry}
+	 							</div>
+	 							<div class="col-sm-2">
+		 							${blogInstance.dateCreated}
+		 						</div>
 	 						</div>
  						</div>
 					</g:if>

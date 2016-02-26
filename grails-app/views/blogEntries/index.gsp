@@ -41,7 +41,7 @@
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
 			<g:link url="../blog"><h1>Home</h1></g:link>
-			<h1>Search: </h1>
+			<h1><a href="../blog/blogEntries/search">Search</a></h1>
 			<g:field type="text" name = "Search" size = "10px"></g:field>
 			<ul>
 			</ul>
@@ -65,7 +65,7 @@
 						</div>	
 					</div>
 					<div id="${i}" class="collapse" class="row blog-post">
-						<div class="col-sm-5 blog-entry">
+						<div id="blog-entry${i}" class="col-sm-5 blog-entry">
 	 						<a href="${createLink(mapping: "blog", controller:'blogEntries', action: 'show', params: [id: blogInstance.id,year: blogInstance.dateCreated.format("yyy"),month: blogInstance.dateCreated.format("MM"),day: blogInstance.dateCreated.format("dd"),title: blogInstance.blogTitle.replaceAll("\\s","-")])}">
 	 							${blogInstance.blogEntry}
  							</a>
