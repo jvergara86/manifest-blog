@@ -204,11 +204,8 @@ img {
 /* NAVIGATION MENU */
 
 .nav {
-	background-color: #efefef;
+	background-image: linear-gradient(to top, #FFFFFF 0%, #b1e0e6 100%);
 	padding: 0.5em 0.75em;
-	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
-	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
-	        box-shadow: 0 0 3px 1px #aaaaaa;
 	zoom: 1;
 }
 
