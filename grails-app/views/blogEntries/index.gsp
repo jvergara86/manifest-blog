@@ -40,8 +40,8 @@
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
-			<g:link url="../blog"><h1>Home</h1></g:link>
-			<h1><a href="../blog/blogEntries/search">Search</a></h1>
+			<g:link url="../blog"><h1 class="home">Home</h1></g:link>
+			<a href="../blog/blogEntries/search"><h1 class="search">Search</h1></a>
 		</div>
 		<div id="page-body" role="main">
 			
