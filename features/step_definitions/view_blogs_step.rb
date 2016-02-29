@@ -19,12 +19,12 @@ end
 
 
 When /^I choose a blog post$/ do
-  @browser.h2(:id => 'blog-link0').click
+  navigate_to_blog_post
 end
 
 Then /^I should see the blog post$/ do
   
-  expect(on_page(AllBlogEntriesPage).get_first_blog).to be_truthy
+  expect(@browser.html).to include '<h1 id="blog-title">Blog Post: '
 
 end
 
