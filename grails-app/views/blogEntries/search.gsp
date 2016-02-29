@@ -32,7 +32,6 @@
 						</g:form>
 					</div>
 				</div>
-				
 				<br>		
 				<g:each var="blog" in="${blogs}">
 					<div class="row">
@@ -43,8 +42,6 @@
 					</g:link>
 					</div>
 				</g:each>
-						
-				
 			</div>
 		</div>
 	</body>

@@ -62,6 +62,7 @@ body {
 
 #blogZoneLogo {
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #b1e0e6));
+	background-image: linear-gradient(to bottom, #FFFFFF 0%, #b1e0e6 100%);
 }
 
 #blogZoneLogo img{
