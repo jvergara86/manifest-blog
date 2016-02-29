@@ -233,16 +233,7 @@ img {
 	        border-radius: 0.3em;
 }
 
-.nav a:active, .nav a:visited {
-	color: #666666;
-}
 
-.nav a:focus, .nav a:hover {
-	background-color: #999999;
-	color: #ffffff;
-	outline: none;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-}
 
 .no-borderradius .nav a:focus, .no-borderradius .nav a:hover {
 	background-color: transparent;
@@ -659,4 +650,16 @@ th:hover, tr:hover {
 a.skip {
 	position: absolute;
 	left: -9999px;
+}
+
+
+.btn-nav, .btn-nav:link, .btn-nav:visited {
+    background-color: transparent;
+    border-radius: 0;
+    color: #6495ed;
+    
+}
+.btn-nav:active, .btn-nav:hover {
+    background-color: #eef7fa;
+    color: #6495ed
 }

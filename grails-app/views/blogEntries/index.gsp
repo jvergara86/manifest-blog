@@ -41,14 +41,17 @@
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav">
 			<ul>
-				<li><g:link class="btn btn-home" url="/./blog"><span class="glyphicon glyphicon-home"></span> Home</g:link></li>
-				<li><g:link class="btn btn-view-blogs" url="/./blog/blogEntries"><span class="glyphicon glyphicon-eye-open"></span> View All Blogs</g:link></li>
-				<li><g:link class="btn btn-search" url="/./blog/blogEntries/search"><span class="glyphicon glyphicon-search"></span> Search Blogs</g:link></li>
+				<li><g:link class="btn btn-nav" url="/./blog"><span class="glyphicon glyphicon-home"></span> Home</g:link></li>
+				<li><g:link class="btn btn-nav" url="../blog/newBlogEntry/create"><span class="glyphicon glyphicon-pencil"></span> Create Blog</g:link></li>
+				<li><g:link class="btn btn-nav" url="/./blog/blogEntries"><span class="glyphicon glyphicon-eye-open"></span> View All Blogs</g:link></li>
+				<li><g:link class="btn btn-nav" url="/./blog/blogEntries/search"><span class="glyphicon glyphicon-search"></span> Search Blogs</g:link></li>
 			</ul>
 		</div>
 		<div id="status" role="complementary">
-			<g:link url="../blog"><h1 class="home">Home</h1></g:link>
-			<a href="../blog/blogEntries/search"><h1 class="search">Search</h1></a>
+			<g:link url="/./blog"><h1 class="home">Home</h1></g:link>
+			<g:link url="/./blog/newBlogEntry/create"><h1 class="create-blog">Create Blog</h1></g:link>
+			<g:link url="/./blog/blogEntries"><h1 class="veiw-all-blogs">View All Blogs</h1></g:link>
+			<g:link url="/./blog/blogEntries/search"><h1 class="search">Search</h1></g:link>
 		</div>
 		<div id="page-body" role="main">
 			
