@@ -27,3 +27,12 @@ Then /^I should see the blog post$/ do
   expect(on_page(AllBlogEntriesPage).get_first_blog).to be_truthy
 
 end
+
+When /^I search for a blog post$/ do
+	search_for_blog
+end
+
+Then /^I should see posts with that value in the title$/ do
+	result = is_search_results_found
+	expect(result).to be_truthy 
+end

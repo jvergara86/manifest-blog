@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Blog Zone Rarararar</title>
+		<title>Blog Zone</title>
 		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		<style type="text/css" media="screen">
 
@@ -39,9 +39,9 @@
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
-			<g:link url="../blog/newBlogEntry/create"><h1>Create Blog</h1></g:link>
-			<g:link url="../blog/blogEntries"><h1>View All Blogs</h1></g:link>
-			<h1><g:link url="../blog/blogEntries/search">Search</g:link></h1>
+			<g:link url="../blog/newBlogEntry/create"><h1 class="create-blog">Create Blog</h1></g:link>
+			<g:link url="../blog/blogEntries"><h1 class="veiw-all-blogs">View All Blogs</h1></g:link>
+			<g:link url="../blog/blogEntries/search"><h1 class="search">Search</h1></g:link>
 
 		</div>
 		<div id="page-body" role="main">

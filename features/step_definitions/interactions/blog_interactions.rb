@@ -30,6 +30,7 @@ end
 
 def delete_test_post
   @browser.back
+  sleep 1
   @browser.button(:class => 'delete').click
   sleep 1
   @browser.alert.ok
@@ -37,9 +38,24 @@ end
 
 def get_blog_entry_count
   counter = 0
-  @browser.divs(:class => 'col-sm-5 blog-entry').each do |div|
+  @browser.divs(:class => 'blog-entry').each do |div|
     counter = counter + 1
   end
   return counter
 end
 
+def is_search_results_found
+	is_found = false
+	@browser.divs(:class => 'search-results').each do |div|
+    is_found = true
+	end
+  return is_found
+end
+
+def search_for_blog
+	search_term = ''
+	@browser.h1(:class => 'search').click
+	sleep 1
+	@browser.text_field(:id => 'search-input').set search_term
+	@browser.button(:class => 'search').click
+end
