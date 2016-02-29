@@ -9,11 +9,11 @@
 	</head>
 	<body>
 		<a href="#show-newBlogEntry" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
+		<div class="nav">
 			<ul>
-				<li><g:link class="home" url="${createLink(uri: '/')}">Home</g:link></li>
-				<li><g:link url="/./blog/blogEntries"><span class="glyphicon glyphicon-step-backward"></span>View All Blogs</g:link></li>
-				<li><g:link url="/./blog/blogEntries/search"><span class="glyphicon glyphicon-search"></span> Search Blogs</g:link></li>
+				<li><g:link class="btn btn-home" url="/./blog"><span class="glyphicon glyphicon-home"></span> Home</g:link></li>
+				<li><g:link class="btn btn-view-blogs" url="/./blog/blogEntries"><span class="glyphicon glyphicon-step-backward"></span>View All Blogs</g:link></li>
+				<li><g:link class="btn btn-search" url="/./blog/blogEntries/search"><span class="glyphicon glyphicon-search"></span> Search Blogs</g:link></li>
 			</ul>
 		</div>
 		<div id="show-newBlogEntry" class="content scaffold-show" role="main">

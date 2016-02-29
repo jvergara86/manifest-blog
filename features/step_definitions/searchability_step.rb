@@ -14,6 +14,5 @@ end
 
 
 Then /^the url should contain information about the post$/ do
-  result = get_blog_entry_count
-  expect(result).to eq(10)
+  expect(@browser.url).to eq('http://localhost:8080/blog/blogEntry/161/2016/02/26/hkjhk')
 end
