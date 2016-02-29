@@ -7,8 +7,7 @@
 		<g:set var="entityName" value="${message(code: 'newBlogEntry.label', default: 'newBlogEntry')}" />
 		<title>Search Blogs</title>
 		<g:javascript library="jquery" />
-		
-		
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<a href="#show-newBlogEntry" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -23,9 +22,7 @@
 		
 		<div id="search-newBlogEntry" class="content scaffold-show" role="main">
 			<br/><br/>
-			<div class="contrainer">
-				
-				
+			<div class="container">
 				<div class="row">
 					<div class="col-sm-5 search-bar-container">
 						<h2>Search for Blogs by Title</h2>

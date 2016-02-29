@@ -1,4 +1,5 @@
 /* FONT STACK */
+
 body,
 input, select, textarea {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -163,16 +164,27 @@ img {
 }
 
 .content {
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .content h1 {
 	border-bottom: 1px solid #CCCCCC;
 	margin: 0.8em 1em 0.3em;
 	padding: 0 0.25em;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .scaffold-list h1 {
 	border: none;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.scaffold-list {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.scaffold{
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .footer {

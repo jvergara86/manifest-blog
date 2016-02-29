@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		<g:set var="entityName" value="${message(code: 'newBlogEntry.label', default: 'newBlogEntry')}" />
 		<title>Update Post: ${newBlogEntryInstance?.blogTitle}</title>
 	</head>
@@ -26,7 +27,7 @@
 			
 				<g:if test="${newBlogEntryInstance?.blogTitle}">
 				<li class="fieldcontain">
-					<span id="blogTitle-label" class="property-label"><g:message code="newBlogEntry.blogTitle.label" default="Blog Title:" /></span>
+					<span id="blogTitle-label" class="property-label"><g:message code="newBlogEntry.blogTitle.label" default="Title:" /></span>
 					
 						<span class="property-value" aria-labelledby="blogTitle-label"><g:fieldValue bean="${newBlogEntryInstance}" field="blogTitle"/></span>
 					
@@ -35,7 +36,7 @@
 			
 				<g:if test="${newBlogEntryInstance?.blogEntry}">
 				<li class="fieldcontain">
-					<span id="blogEntry-label" class="property-label"><g:message code="newBlogEntry.blogEntry.label" default="Update Blog Entry:" /></span>
+					<span id="blogEntry-label" class="property-label"><g:message code="newBlogEntry.blogEntry.label" default="Body:" /></span>
 					
 						<span class="property-value" aria-labelledby="blogEntry-label"><g:fieldValue bean="${newBlogEntryInstance}" field="blogEntry"/></span>
 					
@@ -44,15 +45,13 @@
 			
 				<g:if test="${newBlogEntryInstance?.dateCreated}">
 				<li class="fieldcontain">
-					<span id="dateCreated-label" class="property-label"><g:message code="newBlogEntry.dateCreated.label" default="Date Created" /></span>
+					<span id="dateCreated-label" class="property-label"><g:message code="newBlogEntry.dateCreated.label" default="Date Created:" /></span>
 					
 						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${newBlogEntryInstance?.dateCreated}" /></span>
 					
 				</li>
 				</g:if>
-			
 			</ol>
-			
 		</div>
 	</body>
 </html>
