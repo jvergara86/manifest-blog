@@ -25,7 +25,6 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
 	background-color: #FFFFFF;
-	background-image: -moz-linear-gradient(center top, #aaa, #ddd);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #FFFFFF));
 	background-image: linear-gradient(top, #aaa, #ddd);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#aaaaaa', EndColorStr = '#dddddd');
@@ -38,7 +37,7 @@ html {
 }
 
 html.no-cssgradients {
-	background-color: #aaa;
+	background-color: #FFFFFF;
 }
 
 .ie6 html {
@@ -177,7 +176,7 @@ img {
 }
 
 .footer {
-	background: #b0e0e6;
+	background-image: linear-gradient(to bottom, #FFFFFF 0%, #b1e0e6 100%);
 	color: #000;
 	clear: both;
 	font-size: 0.8em;
