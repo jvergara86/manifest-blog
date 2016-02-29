@@ -3,6 +3,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<title>Create a New Blog Post</title>
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<a href="#create-newBlogEntry" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>

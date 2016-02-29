@@ -5,6 +5,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<title>Your Blog Posts</title>
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<a href="#list-newBlogEntry" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
