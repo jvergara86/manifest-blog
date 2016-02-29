@@ -1,5 +1,6 @@
 package blog
 import blog.NewBlogEntry
+import grails.converters.JSON
 
 class BlogEntriesController {
 
@@ -17,6 +18,6 @@ class BlogEntriesController {
 	   def blogs = NewBlogEntry.findAllByBlogTitleIlike("${params.value}%")
 	   render(view:'search', model: [value: params.value, blogs: blogs])
    }
-  
+   
 }
 

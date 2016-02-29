@@ -6,7 +6,13 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'newBlogEntry.label', default: 'newBlogEntry')}" />
 		<title>Search Blogs</title>
-		<g:javascript library="jquery" />
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+		<style>
+			.ui-autocomlete-loading {
+				background: white url('/./assets/images/spinner.gif') right center no-repeat;
+			}
+		</style>
 		
 		
 	</head>
