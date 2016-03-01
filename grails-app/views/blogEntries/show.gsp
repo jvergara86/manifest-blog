@@ -70,7 +70,7 @@
 					<div id="${i}"><b>${comment.nameOfCommenter}</b><br>
 					${comment.comment}<br><br>
 					<b>${comment.dateCreated}</b><br>
-					<g:link class="comment-link" id="${newBlogEntryInstance.id}" url="/./blog/comments/show/${comment.id}">edit/delete</g:link><br><br><hr>
+					<g:link class="comment-link" id="${newBlogEntryInstance.id}" url="/./blog/comments/show/${comment.id}">edit/delete</g:link><br><hr>
 					</div> 
 				</g:each>
 
