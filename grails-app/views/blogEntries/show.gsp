@@ -61,18 +61,25 @@
 				</fieldset>
 				</g:form>
 				</li>
+
+				<fieldset class="form">
+				<div id="scomments">
+					<h3>Comments:</h3><hr>
 				<li>
 				<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
-					<div id="${i}">${comment.nameOfCommenter}<br>
-					${comment.comment}<br>
-					${comment.dateCreated}<br>
-					<g:link class="comment-link" id="${newBlogEntryInstance.id}" url="/./blog/comments/show/${comment.id}">edit/delete</g:link>
+					<div id="${i}"><b>${comment.nameOfCommenter}</b><br>
+					${comment.comment}<br><br>
+					<b>${comment.dateCreated}</b><br>
+					<g:link class="comment-link" id="${newBlogEntryInstance.id}" url="/./blog/comments/show/${comment.id}">edit/delete</g:link><br><br><hr>
 					</div> 
 				</g:each>
-				
+
 				</li>
-				
+				</div>
+				</fieldset>
+
 			</ol>
+
 		</div>
 		
 	</body>
