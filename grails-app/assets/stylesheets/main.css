@@ -670,7 +670,16 @@ a.skip {
     color: #6495ed;
     
 }
+
 .btn-nav:active, .btn-nav:hover {
     background-color: #eef7fa;
-    color: #6495ed
+    color: #6495ed;
+}
+
+#comment-entry-blog-selector {
+	display: none;
+}
+
+.no-bullets {
+	list-style-type:none;
 }

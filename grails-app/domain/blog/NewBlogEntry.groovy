@@ -9,6 +9,9 @@ class NewBlogEntry {
 	String blogEntry
 	Date dateCreated
 	
+	
+	static hasMany = [comments: Comments]
+	
     static constraints = {
     }
 	

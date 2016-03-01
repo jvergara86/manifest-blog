@@ -1,4 +1,4 @@
-
+<%@ page import="blog.Comments" %>
 <%@ page import="blog.NewBlogEntry" %>
 <!DOCTYPE html>
 <html>
@@ -23,7 +23,7 @@
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<ol class="property-list newBlogEntry">
+			<ol class="property-list newBlogEntry no-bullets">
 			
 				<g:if test="${newBlogEntryInstance?.blogTitle}">
 				<li class="fieldcontain">
@@ -51,6 +51,27 @@
 					
 				</li>
 				</g:if>
+				<li>
+				<g:form url="[resource:commentsInstance, controller:'comments', action:'save']" >
+				<fieldset class="form">
+					<g:render template="/comments/form"/>
+				</fieldset>
+				<fieldset class="buttons">
+					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+				</fieldset>
+				</g:form>
+				</li>
+				<li>
+				<g:each in="${newBlogEntryInstance?.comments?}" var="comment" status="i">
+					<div id="${comment.id}">${comment.nameOfCommenter}<br>
+					${comment.comment}<br>
+					${comment.dateCreated}
+					</div> 
+				
+				</g:each>
+				
+				</li>
+				
 			</ol>
 		</div>
 	</body>
