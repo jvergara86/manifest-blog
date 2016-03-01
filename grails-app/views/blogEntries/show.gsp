@@ -63,11 +63,10 @@
 				</li>
 				<li>
 				<g:each in="${newBlogEntryInstance?.comments?}" var="comment" status="i">
-					<div id="${comment.id}">${comment.nameOfCommenter}<br>
+					<div id="${comment.id}">${comment.nameOfCommenter}><br>
 					${comment.comment}<br>
 					${comment.dateCreated}
-					</div> 
-				
+					</div>
 				</g:each>
 				
 				</li>
