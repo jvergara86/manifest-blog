@@ -62,17 +62,18 @@
 				</g:form>
 				</li>
 				<li>
-				<g:each in="${newBlogEntryInstance?.comments?}" var="comment" status="i">
-					<div id="${comment.id}">${comment.nameOfCommenter}<br>
+				<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
+					<div id="${i}">${comment.nameOfCommenter}<br>
 					${comment.comment}<br>
-					${comment.dateCreated}
+					${comment.dateCreated}<br>
+					<g:link class="comment-link" id="${newBlogEntryInstance.id}" url="/./blog/comments/show/${comment.id}">edit/delete</g:link>
 					</div> 
-				
 				</g:each>
 				
 				</li>
 				
 			</ol>
 		</div>
+		
 	</body>
 </html>

@@ -10,6 +10,7 @@ class Comments {
 	
 	static mapping = {
 		table 'comments'
+		sort dateCreated: "desc"
 	}
 	
     static constraints = {

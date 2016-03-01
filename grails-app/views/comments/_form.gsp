@@ -21,7 +21,7 @@
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: commentsInstance, field: 'blogEntry', 'error')} required">
-	<g:select id="comment-entry-blog-selector" name="blogEntry.id" from="${blog.NewBlogEntry.list()}" optionKey="id" required="" value="${commentsInstance?.blogEntry?.id}" class="many-to-one"/>
+	<g:select id="comment-entry-blog-selector" name="blogEntry.id" from="${blog.NewBlogEntry.list()}" optionKey="id" required="" value="${newBlogEntryInstance.id}" class="many-to-one"/>
 
 </div>
 
