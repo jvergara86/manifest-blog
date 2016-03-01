@@ -67,7 +67,7 @@
 					<h3>Comments:</h3><hr>
 				<li>
 				<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
-					<div id="${i}"><b>${comment.nameOfCommenter}</b><br>
+					<div id="${i}"><h2>${comment.nameOfCommenter}</h2><br>
 					${comment.comment}<br><br>
 					<b>${comment.dateCreated}</b><br>
 					<g:link class="comment-link" id="${newBlogEntryInstance.id}" url="/./blog/comments/show/${comment.id}">edit/delete</g:link><br><hr>
