@@ -6,7 +6,7 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'newBlogEntry.label', default: 'newBlogEntry')}" />
 		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-		<title>Update Post: ${newBlogEntryInstance?.blogTitle}</title>
+		<title>Blog Post: ${newBlogEntryInstance?.blogTitle}</title>
 	</head>
 	<body>
 		<a href="#show-newBlogEntry" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -35,9 +35,10 @@
 			
 				<g:if test="${newBlogEntryInstance?.blogEntry}">
 				<li class="fieldcontain">
-					<span id="blogEntry-label" class="property-label"><g:message code="newBlogEntry.blogEntry.label" default="Update Blog Entry:" /></span>
+				
+					<span id="blogEntry-label" class="property-label"><g:message code="newBlogEntry.blogEntry.label" default="Blog Entry:" /></span>
 					
-						<span class="property-value" aria-labelledby="blogEntry-label"><g:fieldValue bean="${newBlogEntryInstance}" field="blogEntry"/></span>
+						<span class="property-value" aria-labelledby="blogEntry-label"><pre><g:fieldValue bean="${newBlogEntryInstance}" field="blogEntry"/></pre></span>
 					
 				</li>
 				</g:if>

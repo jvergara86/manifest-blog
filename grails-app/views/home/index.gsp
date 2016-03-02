@@ -41,7 +41,7 @@
 		<div class="nav">
 			<ul>
 				<li><g:link class="btn btn-nav" url="/./blog"><span class="glyphicon glyphicon-home"></span> Home</g:link></li>
-				<li><g:link class="btn btn-nav" url="../blog/newBlogEntry/create"><span class="glyphicon glyphicon-pencil"></span> Create Blog</g:link></li>
+				<li><g:link class="btn btn-nav" url="/./blog/newBlogEntry/create"><span class="glyphicon glyphicon-pencil"></span> Create Blog</g:link></li>
 				<li><g:link class="btn btn-nav" url="/./blog/blogEntries"><span class="glyphicon glyphicon-eye-open"></span> View All Blogs</g:link></li>
 				<li><g:link class="btn btn-nav" url="/./blog/blogEntries/search"><span class="glyphicon glyphicon-search"></span> Search Blogs</g:link></li>
 			</ul>
@@ -70,7 +70,7 @@
 							</div>
 							<div class="row">
 	 							<div class="col-sm-5 blog-entry">
-	 								${blogInstance.blogEntry}
+	 								<pre>${blogInstance.blogEntry}</pre>
 	 							</div>
 	 							<div class="col-sm-2">
 		 							${blogInstance.dateCreated}

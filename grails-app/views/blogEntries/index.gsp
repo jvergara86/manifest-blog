@@ -42,7 +42,7 @@
 		<div class="nav">
 			<ul>
 				<li><g:link class="btn btn-nav" url="/./blog"><span class="glyphicon glyphicon-home"></span> Home</g:link></li>
-				<li><g:link class="btn btn-nav" url="../blog/newBlogEntry/create"><span class="glyphicon glyphicon-pencil"></span> Create Blog</g:link></li>
+				<li><g:link class="btn btn-nav" url="/./blog/newBlogEntry/create"><span class="glyphicon glyphicon-pencil"></span> Create Blog</g:link></li>
 				<li><g:link class="btn btn-nav" url="/./blog/blogEntries"><span class="glyphicon glyphicon-eye-open"></span> View All Blogs</g:link></li>
 				<li><g:link class="btn btn-nav" url="/./blog/blogEntries/search"><span class="glyphicon glyphicon-search"></span> Search Blogs</g:link></li>
 			</ul>
@@ -69,8 +69,8 @@
 					</div>
 					<div id="${i}" class="collapse" class="row blog-post">
 						<div id="blog-entry${i}" class="col-sm-5 blog-entry">
-	 						<a id="blog-link${i}" href="${createLink(mapping: "blog", controller:'blogEntries', action: 'show', params: [id: blogInstance.id,year: blogInstance.dateCreated.format("yyy"),month: blogInstance.dateCreated.format("MM"),day: blogInstance.dateCreated.format("dd"),title: blogInstance.blogTitle.replaceAll("\\s","-")])}">
-	 							${blogInstance.blogEntry}
+	 						<a class="blog-link" id="blog-link${i}" href="${createLink(mapping: "blog", controller:'blogEntries', action: 'show', params: [id: blogInstance.id,year: blogInstance.dateCreated.format("yyy"),month: blogInstance.dateCreated.format("MM"),day: blogInstance.dateCreated.format("dd"),title: blogInstance.blogTitle.replaceAll("\\s","-")])}">
+	 							<pre>${blogInstance.blogEntry}</pre>
  							</a>
 	 					</div>
 	 					<div class="col-sm-2">

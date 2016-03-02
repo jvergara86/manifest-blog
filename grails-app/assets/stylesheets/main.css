@@ -26,7 +26,9 @@ h3 {
 }
 
 
-
+a.blog-link{
+	text-decoration: none;
+}
 
 html {
 	background-color: #FFFFFF;
@@ -88,8 +90,14 @@ body {
 	width: 12em;
 	float: left;
 	border-radius: 0.6em;
+	position: fixed;
+	
 }
 
+/* Chrome only */
+#status {
+	position: fixed;
+}
 	
 .blog-header {
     padding-top: 2%;
@@ -168,7 +176,10 @@ img {
 	display: inline-block;
 	margin: 1em;
 }
-
+pre {
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: transparent;
+}
 .content {
 	font-family: 'Josefin Sans', sans-serif;
 }

@@ -39,7 +39,7 @@
 				<li class="fieldcontain">
 					<span id="blogEntry-label" class="property-label"><b><g:message code="newBlogEntry.blogEntry.label" default="Body:" /></b></span>
 					
-						<span class="property-value" aria-labelledby="blogEntry-label"><g:fieldValue bean="${newBlogEntryInstance}" field="blogEntry"/></span>
+						<span class="property-value" aria-labelledby="blogEntry-label"><pre><g:fieldValue bean="${newBlogEntryInstance}" field="blogEntry"/></pre></span>
 					
 				</li>
 				</g:if>
@@ -64,7 +64,7 @@
 							<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
 								<div class="comment-post" id="comment-post-index${i}">
 									<div id="comment-commenter${i}"><b>${comment.nameOfCommenter}</b></div><br>
-									<div id="comment-comment${i}">${comment.comment}</div>
+									<div id="comment-comment${i}"><pre>${comment.comment}</pre></div>
 									<div id="comment-date${i}">${comment.dateCreated}</div>
 									<a href="/./blog/comments/show/${comment.id}" class="comment-link" id="comment-link-index${i}">edit/delete</a>
 									<hr>
@@ -90,7 +90,7 @@
                 setTimeout(function(){
                 	$('#commenter').val('');
     				$('#comment').val('');
-				}, 300);
+				}, 700);
                 
                });
 	               
