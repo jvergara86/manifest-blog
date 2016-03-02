@@ -8,7 +8,8 @@ Feature: View Blog Entries
     When I visit the blog for my favorite blogger
     Then I should see a summary of the 10 most recent posts, of my favorite blogger, in reverse order
 
-
+  @create_test_blog_entry
+  @delete_test_blog_entry
   Scenario: View a Blog Post
     Given I visit the blog for my favorite blogger
     When I choose a blog post

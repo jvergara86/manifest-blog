@@ -29,7 +29,8 @@ def read_first_title
 end
 
 def delete_test_post
-  @browser.back
+  goto_created_blog_entries
+  @browser.table(:class => 'blog-posts')[1][0].a.click
   sleep 1
   @browser.button(:class => 'delete').click
   sleep 1
@@ -71,7 +72,9 @@ def are_comments_found
     is_found = true
 	end
   return is_found
-	
-
 end
 
+def create_test_post
+	goto_create_blog_entry
+	fill_in_blog
+end
