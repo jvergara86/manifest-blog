@@ -177,10 +177,14 @@ img {
 	margin: 1em;
 }
 pre {
-	width: 100%;
+	
 	font-family: 'Josefin Sans', sans-serif;
 	background-color: transparent;
 	word-wrap: break-word;
+}
+
+.summary pre{
+	overflow: hidden;
 }
 .content {
 	font-family: 'Josefin Sans', sans-serif;

@@ -70,7 +70,7 @@
 							</div>
 							<div class="row">
 	 							<div class="col-sm-5 blog-entry">
-	 								<pre>${blogInstance.blogEntry}</pre>
+	 								<pre class="summary">${blogInstance.blogEntry}</pre>
 	 							</div>
 	 							<div class="col-sm-2">
 		 							${blogInstance.dateCreated}
@@ -84,10 +84,14 @@
 		
 	<script>
 	$(document).ready(function(){
+		$("pre.summary").text(function(index, currentText) {
+		    return currentText.substr(0, 175);
+		});
 		$('.blog-link').click(function(){
 			var clickedID = $(this).attr('id');
 			localStorage.setItem('blog-link', clickedID);
 		});
+		
 	});
 	</script>
 ​
