@@ -1,9 +1,7 @@
 require 'watir-webdriver'
 #Scenario: New Blog Post
 
-After('@delete_test_blog_entry') do
-  delete_test_post
-end
+
 
 Given /^I am logged in as a blogger$/ do
   goto_create_blog_entry

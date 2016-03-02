@@ -1,13 +1,6 @@
 require 'watir-webdriver'
 #Scenario: View Recent Blog Posts
 
-Before ('@create_test_blog_entry') do
-	create_test_post
-end
-
-After ('@delete_test_blog_entry') do
-
-end
 
 #Given /^my favorite blogger has been very active$/ do
 #end

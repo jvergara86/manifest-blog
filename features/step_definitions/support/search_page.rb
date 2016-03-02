@@ -7,5 +7,8 @@ class SearchPage
 	
 	divs(:blog, :class_name => 'search-results')
 
+	def find_blog_title
+		
+	end
 	
 end
