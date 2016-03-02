@@ -58,8 +58,8 @@
 				
 				</li>
 				<li>
+					<h3>Comments</h3><br><hr>
 					<div id="comments-container">
-						<h3>Comments</h3><br><hr>
 						<div id="reload">
 							<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
 								<div class="comment-post">
