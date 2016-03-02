@@ -65,3 +65,13 @@ def navigate_to_blog_post
 	@browser.a(:id => 'blog-link0').click
 end
 
+def are_comments_found
+	is_found = false
+	@browser.divs(:class => 'comment-post').each do |div|
+    is_found = true
+	end
+  return is_found
+	
+
+end
+

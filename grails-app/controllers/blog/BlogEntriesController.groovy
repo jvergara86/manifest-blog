@@ -1,6 +1,4 @@
 package blog
-import blog.NewBlogEntry
-import grails.converters.JSON
 
 class BlogEntriesController {
 

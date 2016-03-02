@@ -13,7 +13,6 @@ end
 =end
 
 
-Then /^the url should contain information about the post$/ do
-  result = are_comments_found
-  expect(result).to be_truthy
+Then /^I should see comments left by other readers$/ do
+  expect(are_comments_found).to be_truthy
 end

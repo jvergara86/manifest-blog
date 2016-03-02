@@ -7,6 +7,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		<g:set var="entityName" value="${message(code: 'newBlogEntry.label', default: 'newBlogEntry')}" />
 		<title>Update Post: ${newBlogEntryInstance?.blogTitle}</title>
+		
 	</head>
 	<body>
 		<a href="#show-newBlogEntry" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -52,28 +53,39 @@
 				</li>
 				</g:if>
 				<li>
-				<g:form url="[resource:commentsInstance, controller:'comments', action:'save']" >
-				<fieldset class="form">
-					<g:render template="/comments/form"/>
-				</fieldset>
-				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-				</fieldset>
-				</g:form>
+				
+						<g:render template="/comments/form"/>
+					
+			
+				
 				</li>
 				<li>
-				<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
-					<div id="${i}">${comment.nameOfCommenter}<br>
-					${comment.comment}<br>
-					${comment.dateCreated}<br>
-					<g:link class="comment-link" id="${newBlogEntryInstance.id}" url="/./blog/comments/show/${comment.id}">edit/delete</g:link>
-					</div> 
-				</g:each>
-				
+				<div id="comments-container">
+					<div id="reload">
+						<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
+							<div class="comment-post">
+								${comment.nameOfCommenter}<br>
+								${comment.comment}<br>
+								${comment.dateCreated}<br>
+								<g:link class="comment-link" id="${newBlogEntryInstance.id}" url="/./blog/comments/show/${comment.id}">edit/delete</g:link>
+							</div> 
+					</g:each>
+					</div>
+				</div>
 				</li>
 				
 			</ol>
 		</div>
 		
+		 <script>
+               $(document).ready(function() {
+               $('#submit-comment').on('click', function() {
+               var url = window.location.href; 
+               $('#comments-container').load(url + ' #reload'); 
+               });
+          });
+         </script> 
+
 	</body>
+	
 </html>

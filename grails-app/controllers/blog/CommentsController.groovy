@@ -40,7 +40,7 @@ class CommentsController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'comments.label', default: 'Comments'), commentsInstance.id])
-                redirect commentsInstance
+                redirect (action: "commentPosts")
             }
             '*' { respond commentsInstance, [status: CREATED] }
         }
@@ -67,7 +67,7 @@ class CommentsController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Comments.label', default: 'Comments'), commentsInstance.id])
-                redirect commentsInstance
+				redirect commentsInstance
             }
             '*'{ respond commentsInstance, [status: OK] }
         }
@@ -86,7 +86,7 @@ class CommentsController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Comments.label', default: 'Comments'), commentsInstance.id])
-                redirect (controller:"blogEntries", action:"index")
+                redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
         }
@@ -101,4 +101,8 @@ class CommentsController {
             '*'{ render status: NOT_FOUND }
         }
     }
+	
+	def commentPosts(Comments commentsInstance) {
+		respond Comments.list(params)
+	}
 }
