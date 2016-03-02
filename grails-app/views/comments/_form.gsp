@@ -7,7 +7,7 @@
 			<g:message code="comments.nameOfCommenter.label" default="Name Of Commenter" />
 			<span class="required-indicator">*</span>
 		</label>
-		<g:textField name="nameOfCommenter" maxlength="75" required="" value="${commentsInstance?.nameOfCommenter}"/>
+		<g:textField id="commenter" name="nameOfCommenter" maxlength="75" required="" value="${commentsInstance?.nameOfCommenter}"/>
 	
 	</div>
 	
@@ -26,7 +26,7 @@
 	</div>
 	<fieldset class="buttons">
 		<span class="glyphicon glyphicon-cloud"></span>
-		<g:submitButton id="submit-comment" name="Submit Comment" onclick="submitForm()"/>
+		<g:submitButton id="submit-comment" name="Submit Comment"/>
 	</fieldset>
 
 </g:formRemote>

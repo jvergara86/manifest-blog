@@ -81,13 +81,19 @@
 		 <script>
 		 var delay=500;
 
-               $(document).ready(function() {
-               $('#submit-comment').on('click', function() {
-               var url = window.location.href; 
-               setTimeout(function(){
-        		 }, delay);
-               $('#comments-container').load(url + ' #reload'); 
+				$(document).ready(function() {
+				$('#submit-comment').on('click', function() {
+				var url = window.location.href; 
+				setTimeout(function(){
+				}, delay);
+                $('#comments-container').load(url + ' #reload'); 
+                setTimeout(function(){
+                	$('#commenter').val('');
+    				$('#comment').val('');
+				}, 300);
+                
                });
+	               
           });
          </script> 
 
