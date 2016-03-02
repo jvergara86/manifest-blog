@@ -78,3 +78,22 @@ def create_test_post
 	goto_create_blog_entry
 	fill_in_blog
 end
+
+def create_test_comment
+	goto_blog_home
+	navigate_to_blog_post
+	@browser.text_field(:id => 'commenter').set 'Test Commenter'
+	@browser.text_field(:id => 'comment').set 'Test Comment Post'
+	@browser.button(:id => 'submit-comment').click
+	sleep 2
+end
+
+def delete_test_comment
+	goto_blog_home
+	navigate_to_blog_post
+	@browser.a(:id => 'comment-link-index0').click
+	sleep 1
+	@browser.button(:class => 'delete').click
+	sleep 1
+	@browser.alert.ok
+end

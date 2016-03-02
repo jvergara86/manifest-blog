@@ -3,6 +3,8 @@ Feature: Blog Comments
   As a Reader
   I want to be able to comment on a blog entry
 
+  @create_test_comment_entry
+  @delete_test_comment_entry
   Scenario: View Blog Comments
     Given I visit the blog for my favorite blogger
     When I choose a blog post
@@ -10,7 +12,8 @@ Feature: Blog Comments
 
   # Use AJAX for this
   # do not want the page to refresh
+  @delete_test_comment_entry
   Scenario: Leave a comment (AJAX)
-    Given I am reading a blog post from my favorite blogger
+    """Given I am reading a blog post from my favorite blogger
     When I add my genius comment to the blog post
     Then my genius comment is at the top of the blog post comments

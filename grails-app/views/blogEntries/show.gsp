@@ -62,11 +62,11 @@
 						<h3>Comments</h3><br><hr>
 						<div id="reload">
 							<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
-								<div class="comment-post">
-									<b>${comment.nameOfCommenter}</b><br><br>
-									${comment.comment}<br>
-									${comment.dateCreated}<br>
-									<g:link class="comment-link" id="${newBlogEntryInstance.id}" url="/./blog/comments/show/${comment.id}">edit/delete</g:link>
+								<div class="comment-post" id="comment-post-index${i}">
+									<div id="comment-commenter${i}"><b>${comment.nameOfCommenter}</b></div><br>
+									<div id="comment-comment${i}">${comment.comment}</div>
+									<div id="comment-date${i}">${comment.dateCreated}</div>
+									<a href="/./blog/comments/show/${comment.id}" class="comment-link" id="comment-link-index${i}">edit/delete</a>
 									<hr>
 								</div>
 						</g:each>

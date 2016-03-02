@@ -19,17 +19,21 @@ end
 
 
 #Scenario: Leave a comment
-
+=begin
 	Given /^I am reading a blog post from my favorite blogger$/ do
-	
+		goto_blog_home
+		navigate_to_blog_post
 	end
 	
-	When /^I add my genius comment to the blog post$/ do
+	-Redundant Code-
+=end
 	
+	When /^I add my genius comment to the blog post$/ do
+		create_test_comment
 	end
 	
 	Then /^my genius comment is at the top of the blog post comments$/ do
-		search_for = my_comment
-		expect(search_for).to be_truthy
+		expect(@browser.div(:id => 'comment-commenter0').text).to include("Test Commenter")
+		expect(@browser.div(:id => 'comment-comment0').text).to include("Test Comment Post")
 		
 	end

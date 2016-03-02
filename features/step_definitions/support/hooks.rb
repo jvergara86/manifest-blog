@@ -9,7 +9,7 @@ end
 
 
 Before ('@create_test_blog_entry') do
-	create_test_post
+  create_test_post
 end
 
 After('@delete_test_blog_entry') do
@@ -17,5 +17,10 @@ After('@delete_test_blog_entry') do
 end
 
 Before ('@create_test_comment_entry') do
+  create_test_comment
+end
 
+
+After ('@delete_test_comment_entry') do
+  delete_test_comment
 end
