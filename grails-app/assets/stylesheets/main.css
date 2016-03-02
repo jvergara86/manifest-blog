@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.1;
 }
 
+h3 {
+	padding-top: 3px
+}
+
 /* BASE LAYOUT */
 
 .search-bar-container {
@@ -141,6 +145,9 @@ a:hover, a:active {
 	outline: none; /* prevents outline in webkit on active links but retains it for tab focus */
 }
 
+hr {
+
+}
 h1,h2 {
 	color: #6495ED;
 	font-weight: normal;
