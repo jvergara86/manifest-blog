@@ -13,7 +13,7 @@ class BlogEntriesController {
    }
    
    def search = {
-	   def blogs = NewBlogEntry.findAllByBlogTitleIlike("${params.value}%")
+	   def blogs = NewBlogEntry.findAllByBlogTitleIlike("%${params.value}%")
 	   render(view:'search', model: [value: params.value, blogs: blogs])
    }
    
