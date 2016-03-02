@@ -14,7 +14,9 @@ Feature: View Blog Entries
     Given I visit the blog for my favorite blogger
     When I choose a blog post
     Then I should see the blog post
-
+	
+  @create_test_blog_entry
+  @delete_test_blog_entry
   Scenario: Search for Blog Post
     Given I visit the blog for my favorite blogger
     When I search for a blog post

@@ -54,7 +54,7 @@ def is_search_results_found
 end
 
 def search_for_blog
-	search_term = ''
+	search_term = 'My Test Blog Title'
 	@browser.h1(:class => 'search').click
 	sleep 1
 	@browser.text_field(:id => 'search-input').set search_term
