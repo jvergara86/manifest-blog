@@ -25,7 +25,7 @@
 	
 	</div>
 	<fieldset class="buttons">
-		<span class="glyphicon glyphicon-send"></span>
+		<span class="glyphicon glyphicon-cloud"></span>
 		<g:submitButton id="submit-comment" name="Submit Comment" onclick="submitForm()"/>
 	</fieldset>
 
