@@ -51,9 +51,11 @@ html.no-cssgradients {
 	height: 100%;
 }
 
+/*
 html * {
 	margin: 0;
 }
+*/
 
 body {
 	background: #ffffff;
@@ -90,14 +92,10 @@ body {
 	width: 12em;
 	float: left;
 	border-radius: 0.6em;
-	position: fixed;
+	
 	
 }
 
-/* Chrome only */
-#status {
-	position: fixed;
-}
 	
 .blog-header {
     padding-top: 2%;
