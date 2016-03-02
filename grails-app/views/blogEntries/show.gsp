@@ -1,4 +1,4 @@
-<%@ page import="blog.Comments" %>
+><%@ page import="blog.Comments" %>
 <%@ page import="blog.NewBlogEntry" %>
 <!DOCTYPE html>
 <html>
@@ -28,7 +28,7 @@
 			
 				<g:if test="${newBlogEntryInstance?.blogTitle}">
 				<li class="fieldcontain">
-					<span id="blogTitle-label" class="property-label"><g:message code="newBlogEntry.blogTitle.label" default="Title:" /></span>
+					<span id="blogTitle-label" class="property-label"><b><g:message code="newBlogEntry.blogTitle.label" default="Title:" /></b></span>
 					
 						<span class="property-value" aria-labelledby="blogTitle-label"><g:fieldValue bean="${newBlogEntryInstance}" field="blogTitle"/></span>
 					
@@ -37,7 +37,7 @@
 			
 				<g:if test="${newBlogEntryInstance?.blogEntry}">
 				<li class="fieldcontain">
-					<span id="blogEntry-label" class="property-label"><g:message code="newBlogEntry.blogEntry.label" default="Body:" /></span>
+					<span id="blogEntry-label" class="property-label"><b><g:message code="newBlogEntry.blogEntry.label" default="Body:" /></b></span>
 					
 						<span class="property-value" aria-labelledby="blogEntry-label"><g:fieldValue bean="${newBlogEntryInstance}" field="blogEntry"/></span>
 					
@@ -46,7 +46,7 @@
 			
 				<g:if test="${newBlogEntryInstance?.dateCreated}">
 				<li class="fieldcontain">
-					<span id="dateCreated-label" class="property-label"><g:message code="newBlogEntry.dateCreated.label" default="Date Created:" /></span>
+					<span id="dateCreated-label" class="property-label"><b><g:message code="newBlogEntry.dateCreated.label" default="Date Created:" /></b></span>
 					
 						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${newBlogEntryInstance?.dateCreated}" /></span>
 					
@@ -55,26 +55,26 @@
 				<li>
 				
 						<g:render template="/comments/form"/>
-					
-			
 				
 				</li>
 				<li>
-				<div id="comments-container">
-					<div id="reload">
-						<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
-							<div class="comment-post">
-								${comment.nameOfCommenter}<br>
-								${comment.comment}<br>
-								${comment.dateCreated}<br>
-								<g:link class="comment-link" id="${newBlogEntryInstance.id}" url="/./blog/comments/show/${comment.id}">edit/delete</g:link>
-							</div> 
-					</g:each>
+					<div id="comments-container">
+						<div id="reload">
+							<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
+								<div class="comment-post">
+									${comment.nameOfCommenter}<br>
+									${comment.comment}<br>
+									${comment.dateCreated}<br>
+									<g:link class="comment-link" id="${newBlogEntryInstance.id}" url="/./blog/comments/show/${comment.id}">edit/delete</g:link>
+								</div> 
+						</g:each>
+						</div>
 					</div>
-				</div>
 				</li>
-				
+				</div>
+
 			</ol>
+
 		</div>
 		
 		 <script>
