@@ -6,11 +6,11 @@
 	<head>
 		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		<g:set var="entityName" value="${message(code: 'newBlogEntry.label', default: 'newBlogEntry')}" />
-		<title>Update Post: ${newBlogEntryInstance?.blogTitle}</title>
+		<title>Posting Comment</title>
 	</head>
 	<body>
 		Refreshing
-		<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
+		<%--<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
 			<div class="comment-post">
 				${comment.nameOfCommenter}<br>
 				<pre>${comment.comment}</pre><br>
@@ -19,6 +19,7 @@
 			</div> 
 		</g:each>
 
+	--%>
 	</body>
 	
 </html>

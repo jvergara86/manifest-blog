@@ -37,13 +37,13 @@ class CommentsController {
 
         commentsInstance.save flush:true
 
-        request.withFormat {
+        /*request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'comments.label', default: 'Comments'), commentsInstance.id])
                 redirect (action: "commentPosts")
             }
             '*' { respond commentsInstance, [status: CREATED] }
-        }
+        }*/
     }
 
     def edit(Comments commentsInstance) {

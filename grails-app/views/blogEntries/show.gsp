@@ -79,22 +79,21 @@
 		</div>
 		
 		 <script>
-		 var delay=500;
+		 var textClearDelay = 500;
+		 var refreshDelay = 200;
 
-				$(document).ready(function() {
+			$(document).ready(function() {
 				$('#submit-comment').on('click', function() {
 				var url = window.location.href; 
-				setTimeout(function(){
-				}, delay);
-                $('#comments-container').load(url + ' #reload'); 
                 setTimeout(function(){
                 	$('#commenter').val('');
     				$('#comment').val('');
-				}, 700);
-                
-               });
-	               
-          });
+				}, textClearDelay);
+                setTimeout(function(){
+                	$('#comments-container').load(url + ' #reload'); 
+                }, refreshDelay);
+              	});
+         	 });
          </script> 
 
 	</body>
