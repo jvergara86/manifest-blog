@@ -1,4 +1,4 @@
-><%@ page import="blog.Comments" %>
+<%@ page import="blog.Comments" %>
 <%@ page import="blog.NewBlogEntry" %>
 <!DOCTYPE html>
 <html>
