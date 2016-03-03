@@ -64,6 +64,7 @@ end
 def navigate_to_blog_post
 	@browser.h2(:id => 'blog-link0').click
 	@browser.a(:id => 'blog-link0').click
+	sleep 2
 end
 
 def are_comments_found
@@ -84,9 +85,9 @@ def create_test_comment
 	navigate_to_blog_post
 	@browser.text_field(:id => 'commenter').set 'Test Commenter'
 	@browser.text_field(:id => 'comment').set 'Test Comment Post'
-	sleep 3
+	sleep 2
 	@browser.button(:id => 'submit-comment').click
-	sleep 3
+	sleep 2
 end
 
 def delete_test_comment

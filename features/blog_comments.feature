@@ -2,7 +2,7 @@ Feature: Blog Comments
   In order to show the rest of the world I'm even smarter than the blogger
   As a Reader
   I want to be able to comment on a blog entry
-
+  
   @create_test_comment_entry
   @delete_test_comment_entry
   Scenario: View Blog Comments
