@@ -84,9 +84,9 @@ def create_test_comment
 	navigate_to_blog_post
 	@browser.text_field(:id => 'commenter').set 'Test Commenter'
 	@browser.text_field(:id => 'comment').set 'Test Comment Post'
-	sleep 2
+	sleep 3
 	@browser.button(:id => 'submit-comment').click
-	sleep 2
+	sleep 3
 end
 
 def delete_test_comment

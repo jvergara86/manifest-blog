@@ -84,14 +84,16 @@
 
 			$(document).ready(function() {
 				$('#submit-comment').on('click', function() {
-				var url = window.location.href; 
-                setTimeout(function(){
-                	$('#commenter').val('');
-    				$('#comment').val('');
-				}, textClearDelay);
-                setTimeout(function(){
-                	$('#comments-container').load(url + ' #reload'); 
-                }, refreshDelay);
+					var url = window.location.href; 
+	                setTimeout(function(){
+		                if(document.getElementById("commenter").value != '' && document.getElementById("comment").value != '') {
+		                	$('#commenter').val('');
+		    				$('#comment').val('');
+		                }
+					}, textClearDelay);
+	                setTimeout(function(){
+	                	$('#comments-container').load(url + ' #reload'); 
+	                }, refreshDelay);
               	});
          	 });
          </script> 

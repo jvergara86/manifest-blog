@@ -24,7 +24,7 @@ end
 
 Then /^I should see the blog post$/ do
   
-  expect(@browser.html).to include '<h1 id="blog-title">Blog Post: My Test Blog Title'
+  expect(@browser.h1(:id => 'blog-title').text).to eq('Blog Post: My Test Blog Title')
 
 end
 
