@@ -59,6 +59,7 @@ grails {
     }
 }
 
+
 // configures the URL to hyphenated from camelCasing
 grails.web.url.converter = 'hyphenated'
 

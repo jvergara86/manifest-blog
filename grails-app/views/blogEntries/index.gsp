@@ -80,6 +80,11 @@
 				</g:each>
 			</div>
 		</div>
+		<div class="pagination">
+				<g:paginate next="Older Posts" prev="Newer Posts"
+            	max="10" controller="blogEntries"
+            	action="index" total="${total}" />
+		</div>
 	<script>
 	$(document).ready(function(){
 		if(localStorage.getItem('blog-link') != 'N/A'){

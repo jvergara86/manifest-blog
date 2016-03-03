@@ -58,7 +58,7 @@ def search_for_blog
 	@browser.h1(:class => 'search').click
 	sleep 1
 	@browser.text_field(:id => 'search-input').set search_term
-	@browser.button(:class => 'search').click
+	@browser.button(:class => 'search-button').click
 end
 
 def navigate_to_blog_post

@@ -23,7 +23,7 @@
 		<div id="search-newBlogEntry" class="content scaffold-show" role="main">
 			<br/><br/>
 			<div class="container">
-				<div class="row">
+				<%--<div class="row">
 					<div class="col-sm-5 search-bar-container">
 						<h2>Search for Blogs by Title</h2>
 						<g:form controller="blogEntries" method="post">
@@ -42,7 +42,17 @@
 					</g:link>
 					</div>
 				</g:each>
+			--%>
+				<g:formRemote name="remoteSearch" url="[controller:'blogEntries',action:'remoteSearch']" update="[success:'results', failure:'error']">
+					<input type='text' id="search-input" name='value' value="${value}"/>
+					<g:submitButton class="search-button"name="search" value="Search"/>
+				</g:formRemote>
+				
+				<div id="error"></div>    
+				Results:
+				<div id="results"></div>
 			</div>
 		</div>
+		
 	</body>
 </html>
