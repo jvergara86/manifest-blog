@@ -186,9 +186,14 @@ pre {
     
 }
 
-pre.summary{
+pre.summary {
     max-height: 200px;
 }
+
+pre.created-blog-body {
+	border-style: none;
+}
+
 .content {
 	font-family: 'Josefin Sans', sans-serif;
 }
@@ -516,6 +521,7 @@ td, th {
 	padding: 0.5em 0.6em;
 	text-align: left;
 	vertical-align: top;
+	
 }
 
 th {

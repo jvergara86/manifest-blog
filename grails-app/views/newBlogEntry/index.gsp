@@ -38,7 +38,7 @@
 					
 						<td id="cell${i}"><g:link action="show" id="${newBlogEntryInstance.id}">${fieldValue(bean: newBlogEntryInstance, field: "blogTitle")}</g:link></td>
 					
-						<td>${fieldValue(bean: newBlogEntryInstance, field: "blogEntry")}</td>
+						<td><pre class="created-blog-body">${fieldValue(bean: newBlogEntryInstance, field: "blogEntry")}</pre ></td>
 					
 						<td><g:formatDate date="${newBlogEntryInstance.dateCreated}" /></td>
 					
