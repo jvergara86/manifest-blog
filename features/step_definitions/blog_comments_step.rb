@@ -30,6 +30,7 @@ end
 	
 	When /^I add my genius comment to the blog post$/ do
 		create_test_comment
+		sleep 1
 	end
 	
 	Then /^my genius comment is at the top of the blog post comments$/ do
