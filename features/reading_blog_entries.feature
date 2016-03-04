@@ -2,7 +2,9 @@ Feature: View Blog Entries
   In order to stay up todate
   As a Reader
   I want to be able to view blog posts of my favorite blogger
-
+  
+  @create_10_test_blog_entries
+  @delete_10_test_blog_entries
   Scenario: View Recent Blog Posts
     """Given my favorite blogger has been very active
     When I visit the blog for my favorite blogger

@@ -7,6 +7,32 @@ After do
   @browser.close
 end
 
+Before ('@create_10_test_blog_entries') do
+  create_test_post
+  create_test_post
+  create_test_post
+  create_test_post
+  create_test_post
+  create_test_post
+  create_test_post
+  create_test_post
+  create_test_post
+  create_test_post
+  
+end
+
+After ('@delete_10_test_blog_entries') do
+  delete_test_post
+  delete_test_post
+  delete_test_post
+  delete_test_post
+  delete_test_post
+  delete_test_post
+  delete_test_post
+  delete_test_post
+  delete_test_post
+  delete_test_post
+end
 
 Before ('@create_test_blog_entry') do
   create_test_post
