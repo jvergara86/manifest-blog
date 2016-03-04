@@ -195,6 +195,14 @@ pre.created-blog-body{
 	border-style: none;
 }
 
+.delete-comment {
+	background-color: transparent;
+    border-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #6495ED;
+
+}
+
 .content {
 	font-family: 'Josefin Sans', sans-serif;
 }

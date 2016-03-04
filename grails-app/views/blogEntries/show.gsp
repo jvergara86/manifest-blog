@@ -87,6 +87,9 @@
 	</body>
 	<script><%--
 		$(document).ready(function() {
+		
+		$(".delete").removeAttr("style");
+		
 			$('.delete-comment-button').click(function(){
 				var url = window.location.href;
 				$("#comments-container").load("url #reload");
