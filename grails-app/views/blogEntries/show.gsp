@@ -60,17 +60,7 @@
 				<li>
 					<h3>Comments</h3><br><hr>
 					<div id="comments-container">
-						<div id="reload">
-							<g:each in="${newBlogEntryInstance?.comments?.sort{a,b -> (a.dateCreated > b.dateCreated) ? -1 : 1}}" var="comment" status="i">
-								<div class="comment-post" id="comment-post-index${i}">
-									<div id="comment-commenter${i}"><b>${comment.nameOfCommenter}</b></div><br>
-									<div id="comment-comment${i}"><pre>${comment.comment}</pre></div>
-									<div id="comment-date${i}">${comment.dateCreated}</div>
-									<a href="/./blog/comments/show/${comment.id}" class="comment-link" id="comment-link-index${i}">edit/delete</a>
-									<hr>
-								</div>
-						</g:each>
-						</div>
+						<g:render template="/comments/commentPosts"/>
 					</div>
 				</li>
 
@@ -80,7 +70,6 @@
 		
 		 <script>
 		 var textClearDelay = 500;
-		 var refreshDelay = 200;
 
 			$(document).ready(function() {
 				$('#submit-comment').on('click', function() {
@@ -91,9 +80,6 @@
 		    				$('#comment').val('');
 		                }
 					}, textClearDelay);
-	                setTimeout(function(){
-	                	$('#comments-container').load(url + ' #reload'); 
-	                }, refreshDelay);
               	});
          	 });
          </script> 

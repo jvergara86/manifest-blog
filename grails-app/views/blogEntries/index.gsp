@@ -80,7 +80,7 @@
 				</g:each>
 			</div>
 		</div>
-		<div class="pagination">
+		<div class="pagination buttons">
 				<g:paginate next="Older Posts" prev="Newer Posts"
             	max="10" controller="blogEntries"
             	action="index" total="${total}" />
