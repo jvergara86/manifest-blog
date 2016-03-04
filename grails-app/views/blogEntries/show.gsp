@@ -17,6 +17,12 @@
 				<li><g:link class="btn btn-nav" url="/./blog/newBlogEntry/create"><span class="glyphicon glyphicon-pencil"></span> Create Blog</g:link></li>
 				<li><g:link class="btn btn-nav" url="/./blog/blogEntries"><span class="glyphicon glyphicon-eye-open"></span> View All Blogs</g:link></li>
 				<li><g:link class="btn btn-nav" url="/./blog/blogEntries/search"><span class="glyphicon glyphicon-search"></span> Search Blogs</g:link></li>
+				<sec:ifLoggedIn>
+			    	<g:link controller="logout">Logout</g:link>
+			    </sec:ifLoggedIn>
+			    <sec:ifNotLoggedIn>
+					<g:link controller='login' action='auth'>Login</g:link>
+				</sec:ifNotLoggedIn>
 			</ul>
 		</div>
 		<div id="show-newBlogEntry" class="content scaffold-show" role="main">
@@ -51,8 +57,9 @@
 				</li>
 				</g:if>
 				<li>
-				
+					<sec:ifAnyGranted roles='ROLE_ADMIN,ROLE_USER'>
 						<g:render template="/comments/form"/>
+					</sec:ifAnyGranted>
 				
 				</li>
 				<li>

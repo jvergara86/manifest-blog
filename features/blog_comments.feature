@@ -3,6 +3,7 @@ Feature: Blog Comments
   As a Reader
   I want to be able to comment on a blog entry
   
+  @login_to_blog
   @create_test_blog_entry
   @create_test_comment_entry
   @delete_test_comment_entry
@@ -14,6 +15,7 @@ Feature: Blog Comments
 
   # Use AJAX for this
   # do not want the page to refresh
+  @login_to_blog
   @create_test_blog_entry
   @create_test_comment_entry
   @delete_test_comment_entry

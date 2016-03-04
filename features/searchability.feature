@@ -3,6 +3,7 @@ Feature: Search Engine Friendly URLs
   As a Blogger
   I want my blog entries to be easily found by search engines
 
+  @login_to_blog
   @create_test_blog_entry
   @delete_test_blog_entry
   Scenario: Search Engine Friendly URLs (http://juddsolutions.blogspot.com/2011/02/free-mobile-development-lunch-and.html)

@@ -58,7 +58,8 @@ grails {
         // filteringCodecForContentType.'text/html' = 'html'
     }
 }
-
+// configures the logout to only post and not redirect
+grails.plugin.springsecurity.logout.postOnly = false
 
 // configures the URL to hyphenated from camelCasing
 grails.web.url.converter = 'hyphenated'
@@ -118,3 +119,21 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'blog.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'blog.UserRole'
+grails.plugin.springsecurity.authority.className = 'blog.Role'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/**':                ['permitAll'],
+	'/index':           ['permitAll'],
+	'/index.gsp':       ['permitAll'],
+	'/assets/**':       ['permitAll'],
+	'/**/js/**':        ['permitAll'],
+	'/**/css/**':       ['permitAll'],
+	'/**/images/**':    ['permitAll'],
+	'/**/favicon.ico':  ['permitAll'],
+	'/dbconsole/**':  	['permitAll']
+]
+

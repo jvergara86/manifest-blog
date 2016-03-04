@@ -95,3 +95,14 @@ def delete_test_comment
 	@browser.button(:id => 'delete-comment-button0').click
 	sleep 1
 end
+
+def login_to_blog
+	visit_page LoginPage
+	on_page(LoginPage).login
+	sleep 1
+end
+
+def logout_of_blog
+	visit_page LogoutPage
+	sleep 1
+end

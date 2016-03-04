@@ -3,6 +3,7 @@ Feature: View Blog Entries
   As a Reader
   I want to be able to view blog posts of my favorite blogger
   
+  @login_to_blog
   @create_10_test_blog_entries
   @delete_10_test_blog_entries
   Scenario: View Recent Blog Posts
@@ -10,6 +11,7 @@ Feature: View Blog Entries
     When I visit the blog for my favorite blogger
     Then I should see a summary of the 10 most recent posts, of my favorite blogger, in reverse order
 
+  @login_to_blog
   @create_test_blog_entry
   @delete_test_blog_entry
   Scenario: View a Blog Post
@@ -17,6 +19,7 @@ Feature: View Blog Entries
     When I choose a blog post
     Then I should see the blog post
 	
+  @login_to_blog
   @create_test_blog_entry
   @delete_test_blog_entry
   Scenario: Search for Blog Post

@@ -11,12 +11,15 @@ class UrlMappings {
             }
         }
 
-        "/"(controller:"home")
+        "/"(controller:"home" , action: "index")
         "500"(view:'/error')
 		
 		name blog: "/blogEntry/$id/$year/$month/$day/$title" {
 			controller = "blogEntries"
 			action = "show"
 		}
+		
+		"/login/$action?"(controller: "login")
+		"/logout/$action?"(controller: "logout")
 	}
 }

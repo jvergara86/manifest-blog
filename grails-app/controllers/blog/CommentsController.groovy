@@ -4,12 +4,14 @@ package blog
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import grails.plugin.springsecurity.annotation.Secured
 
 @Transactional(readOnly = true)
 class CommentsController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+	
+	
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Comments.list(params), model:[commentsInstanceCount: Comments.count()]
@@ -18,11 +20,13 @@ class CommentsController {
     def show(Comments commentsInstance) {
         respond commentsInstance
     }
-
+	
+	@Secured(['ROLE_ADMIN', 'ROLE_USER'])
     def create() {
         respond new Comments(params)
     }
-
+	
+	@Secured(['ROLE_ADMIN', 'ROLE_USER'])
     @Transactional
     def save(Comments commentsInstance) {
         if (commentsInstance == null) {
@@ -46,12 +50,15 @@ class CommentsController {
         }
     }
 
+	@Secured(['ROLE_ADMIN', 'ROLE_USER'])
     def edit(Comments commentsInstance) {
         respond commentsInstance
 		
     }
-
+	
+	
     @Transactional
+	@Secured(['ROLE_ADMIN', 'ROLE_USER'])
     def update(Comments commentsInstance) {
         if (commentsInstance == null) {
             notFound()
@@ -74,6 +81,7 @@ class CommentsController {
         }
     }
 
+	@Secured(['ROLE_ADMIN', 'ROLE_USER'])
     @Transactional
     def delete(Comments commentsInstance) {
 

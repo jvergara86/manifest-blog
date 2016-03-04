@@ -2,7 +2,8 @@ Feature: Post a Blog Entry
   In order to show the rest of the world how smart I am
   As a Blogger
   I want to be able to post a blog entry
-
+  
+  @login_to_blog
   @delete_test_blog_entry
   Scenario: New Blog Post
     Given I am logged in as a blogger

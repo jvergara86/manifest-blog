@@ -1,4 +1,5 @@
 package blog
+import grails.plugin.springsecurity.annotation.Secured
 
 class BlogEntriesController {
 
