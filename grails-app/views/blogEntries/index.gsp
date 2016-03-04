@@ -74,7 +74,7 @@
  							</a>
 	 					</div>
 	 					<div class="col-sm-2">
-	 						${blogInstance.dateCreated}
+	 						${blogInstance.dateCreated.format("EEE-dd-MMM-yyy hh:mm aa")}
 	 					</div>
 					</div>
 				</g:each>

@@ -58,7 +58,9 @@
 				<li>
 					<h3>Comments</h3><br><hr>
 					<div id="comments-container">
-						<g:render template="/comments/commentPosts"/>
+						<div id="reload">
+							<g:render template="/comments/commentPosts"/>
+						</div>
 					</div>
 				</li>
 
@@ -83,5 +85,13 @@
          </script> 
 
 	</body>
-	
+	<script><%--
+		$(document).ready(function() {
+			$('.delete-comment-button').click(function(){
+				var url = window.location.href;
+				$("#comments-container").load("url #reload");
+			})
+		})
+			
+	--%></script>
 </html>

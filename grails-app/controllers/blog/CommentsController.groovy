@@ -47,8 +47,8 @@ class CommentsController {
     }
 
     def edit(Comments commentsInstance) {
-		println "comment: ${commentsInstance.id}"
         respond commentsInstance
+		
     }
 
     @Transactional
@@ -68,7 +68,7 @@ class CommentsController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Comments.label', default: 'Comments'), commentsInstance.id])
-				redirect commentsInstance
+				redirect (controller: "blogEntries", action: "show", id:"${commentsInstance.blogEntryId}")
             }
             '*'{ respond commentsInstance, [status: OK] }
         }
@@ -86,7 +86,7 @@ class CommentsController {
 
         request.withFormat {
             form multipartForm {
-                redirect (controller:"blogEntries", action:"show", id:commentsInstance.blogEntryId)
+                render (template: "commentPosts", model: [newBlogEntryInstance:commentsInstance.blogEntry])
             }
             '*'{ render status: NO_CONTENT }
         }

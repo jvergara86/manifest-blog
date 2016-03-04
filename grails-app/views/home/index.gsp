@@ -73,7 +73,7 @@
 	 								<pre class="summary">${blogInstance.blogEntry}</pre>
 	 							</div>
 	 							<div class="col-sm-2">
-		 							${blogInstance.dateCreated}
+		 							${blogInstance.dateCreated.format("EEE-dd-MMM-yyy hh:mm aa")}
 		 						</div>
 	 						</div>
  						</div>

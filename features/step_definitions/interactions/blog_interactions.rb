@@ -92,9 +92,6 @@ end
 def delete_test_comment
 	goto_blog_home
 	navigate_to_blog_post
-	@browser.a(:id => 'comment-link-index0').click
+	@browser.button(:id => 'delete-comment-button0').click
 	sleep 1
-	@browser.button(:class => 'delete').click
-	sleep 1
-	@browser.alert.ok
 end
