@@ -11,9 +11,7 @@
 		
 		<div id="edit-comments" class="content scaffold-edit" role="main">
 			<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
-			</g:if>
+			
 			<g:hasErrors bean="${commentsInstance}">
 			<ul class="errors" role="alert">
 				<g:eachError bean="${commentsInstance}" var="error">
@@ -24,7 +22,7 @@
 			<g:form url="[resource:commentsInstance, action:'update']" method="PUT" >
 				<g:hiddenField name="version" value="${commentsInstance?.version}" />
 				<fieldset class="form">
-					<g:render template="form"/>
+					<g:render template="editForm"/>
 				</fieldset>
 				<fieldset class="buttons">
 					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />

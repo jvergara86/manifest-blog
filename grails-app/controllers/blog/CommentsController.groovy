@@ -47,6 +47,7 @@ class CommentsController {
     }
 
     def edit(Comments commentsInstance) {
+		println "comment: ${commentsInstance.id}"
         respond commentsInstance
     }
 

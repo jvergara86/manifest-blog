@@ -17,9 +17,7 @@
 		
 		<div id="show-comments" class="content scaffold-show" role="main">
 			<h1>Comment for Blog: ${commentsInstance.blogEntry.blogTitle}</h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
-			</g:if>
+			
 			<ol class="property-list comments">
 			
 				<g:if test="${commentsInstance?.nameOfCommenter}">
@@ -48,6 +46,7 @@
 					
 				</li>
 				</g:if>
+				
 			
 			</ol>
 			<g:form url="[resource:commentsInstance, controller:'comments', action:'delete']" method="DELETE">

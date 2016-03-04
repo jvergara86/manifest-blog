@@ -2,7 +2,6 @@
 <%@ page import="blog.NewBlogEntry" %>
 
 
-<g:formRemote name="commentForm" url="[controller:'comments', action:'save']" update="comments-container" >
 
 	<div class="fieldcontain ${hasErrors(bean: commentsInstance, field: 'nameOfCommenter', 'error')} required">
 		<label for="nameOfCommenter">
@@ -21,11 +20,6 @@
 	</div>
 	
 	<div class="fieldcontain ${hasErrors(bean: commentsInstance, field: 'blogEntry', 'error')} required">
-		<g:select id="comment-entry-blog-selector" name="blogEntry.id" from="${blog.NewBlogEntry.list()}" optionKey="id" required="" value="${newBlogEntryInstance.id}" class="many-to-one"/>
+		<g:select id="comment-entry-blog-selector" name="blogEntryId" from="${commentsInstance}" optionKey="id" required="" value="${commentsInstance.blogEntryId}" class="many-to-one"/>
 	</div>
-	<fieldset class="buttons">
-		<span class="glyphicon glyphicon-cloud"></span>
-		<g:submitButton id="submit-comment" name="Submit Comment"/>
-	</fieldset>
 
-</g:formRemote>
